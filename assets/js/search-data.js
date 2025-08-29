@@ -39,7 +39,7 @@ ninja.data = [{
           },
         },{id: "nav-cv",
           title: "cv",
-          description: "This is a description of the page. You can modify it in &#39;_pages/cv.md&#39;. You can also change or remove the top pdf download button.",
+          description: "Chijioke Ugwuanyi - Machine Learning Engineer &amp; Researcher at Carnegie Mellon University",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
@@ -451,29 +451,29 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
-          section: "News",},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
+          section: "News",},{id: "projects-adversarial-robustness-research",
+          title: 'Adversarial Robustness Research',
+          description: "Evaluating Model Robustness to Adversarial Attacks on CIFAR-10",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
-            },},{id: "projects-project-2",
-          title: 'project 2',
-          description: "a project with a background image and giscus comments",
+            },},{id: "projects-mlops-pipeline",
+          title: 'MLOps Pipeline',
+          description: "End-to-End Data Engineering Pipeline for Machine Learning Operations",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
-            },},{id: "projects-project-3-with-very-long-name",
-          title: 'project 3 with very long name',
-          description: "a project that redirects to another website",
+            },},{id: "projects-computer-vision-for-autonomous-vehicles",
+          title: 'Computer Vision for Autonomous Vehicles',
+          description: "Object Detection and Tracking Algorithms for Self-Driving Cars",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
-            },},{id: "projects-project-4",
-          title: 'project 4',
-          description: "another without an image",
+            },},{id: "projects-comparative-analysis-of-classification-models",
+          title: 'Comparative Analysis of Classification Models',
+          description: "Machine Learning Model Evaluation for Loan Approval Prediction",
           section: "Projects",handler: () => {
               window.location.href = "/projects/4_project/";
-            },},{id: "projects-project-5",
-          title: 'project 5',
-          description: "a project with a background image",
+            },},{id: "projects-plaid-shell-implementation",
+          title: 'Plaid Shell Implementation',
+          description: "Building a Fully Featured Linux Shell from Scratch in C",
           section: "Projects",handler: () => {
               window.location.href = "/projects/5_project/";
             },},{id: "projects-project-6",
@@ -501,7 +501,14 @@ ninja.data = [{
         title: 'email',
         section: 'Socials',
         handler: () => {
-          window.open("mailto:%79%6F%75@%65%78%61%6D%70%6C%65.%63%6F%6D", "_blank");
+          window.open("mailto:%63%68%69%6A%69%6F%6B%65.%75%67%77%75%61%6E%79%69@%65%78%61%6D%70%6C%65.%63%6F%6D", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/xplorer1", "_blank");
         },
       },{
         id: 'social-inspire',
@@ -509,6 +516,20 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://inspirehep.net/authors/1010907", "_blank");
+        },
+      },{
+        id: 'social-kaggle',
+        title: 'Kaggle',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.kaggle.com/chijiokeugwuanyi", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/chijioke-ugwuanyi", "_blank");
         },
       },{
         id: 'social-rss',
