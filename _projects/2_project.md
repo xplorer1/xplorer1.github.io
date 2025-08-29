@@ -1,81 +1,86 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
-img: assets/img/3.jpg
+title: MLOps Pipeline
+description: End-to-End Data Engineering Pipeline for Machine Learning Operations
+img: assets/img/12.jpg
 importance: 2
 category: work
-giscus_comments: true
+related_publications: false
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+## MLOps Pipeline - End-to-End Data Engineering
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+This project focuses on building a comprehensive MLOps pipeline that streamlines the entire machine learning workflow from data ingestion to model deployment. The pipeline addresses the critical need for scalable, reproducible, and maintainable machine learning operations in production environments.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+### Pipeline Architecture
+
+The MLOps pipeline consists of several interconnected components:
+
+1. **Data Ingestion Layer**
+   - Automated data collection from multiple sources
+   - Real-time streaming capabilities for live data
+   - Data validation and quality checks
+
+2. **Data Processing & Transformation**
+   - ETL processes for data cleaning and feature engineering
+   - Automated data pipeline orchestration
+   - Version control for data transformations
+
+3. **Model Training & Evaluation**
+   - Automated model training workflows
+   - Hyperparameter optimization and experimentation tracking
+   - Model performance monitoring and evaluation
+
+4. **Deployment & Monitoring**
+   - Model versioning and deployment automation
+   - A/B testing capabilities
+   - Real-time performance monitoring and alerting
+
+### Key Features
+
+- **Scalability**: Designed to handle large-scale data processing
+- **Reproducibility**: Version-controlled data and model pipelines
+- **Monitoring**: Comprehensive logging and performance tracking
+- **Automation**: Reduced manual intervention in ML workflows
+- **Integration**: Seamless integration with existing infrastructure
+
+### Technologies Implemented
+
+- **Data Orchestration**: Apache Airflow for workflow management
+- **Containerization**: Docker for consistent deployment environments
+- **Monitoring**: Prometheus and Grafana for metrics visualization
+- **Version Control**: DVC for data and model versioning
+- **Cloud Integration**: AWS services for scalable infrastructure
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="Pipeline Architecture" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="Data Flow Diagram" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="Monitoring Dashboard" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
+    Overview of the MLOps pipeline architecture, data flow patterns, and monitoring dashboard.
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+### Business Impact
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+This MLOps implementation delivered significant improvements:
+- **50% reduction** in time-to-deployment for new models
+- **Improved model reliability** through automated testing and validation
+- **Better resource utilization** through optimized pipeline scheduling
+- **Enhanced collaboration** between data scientists and engineers
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+### Future Enhancements
 
-{% raw %}
+The pipeline is designed for continuous improvement:
+- Integration with advanced monitoring tools
+- Automated model retraining based on performance degradation
+- Enhanced security and compliance features
+- Multi-cloud deployment capabilities
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
+This project demonstrates the importance of proper MLOps practices in production machine learning systems and showcases expertise in building scalable data infrastructure.

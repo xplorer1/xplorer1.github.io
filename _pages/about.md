@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: 
+subtitle: Machine Learning Engineer & Researcher
 
 profile:
   align: right
@@ -10,6 +10,8 @@ profile:
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Carnegie Mellon University</p>
+    <p>M.Sc., Information Technology</p>
+    <p>Machine Learning & AI Research</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -25,8 +27,29 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I'm Chijioke Ugwuanyi, a Machine Learning Engineer and Researcher currently pursuing my M.Sc. in Information Technology at Carnegie Mellon University. I'm passionate about advancing AI research and developing robust machine learning systems that can make a real-world impact.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+My research focuses on **adversarial robustness in deep learning**, **MLOps pipelines**, and **computer vision applications**. I'm particularly interested in building systems that are not only accurate but also reliable and robust against real-world challenges.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+## Current Research & Interests
+
+I'm currently working on adversarial robustness research, where I've demonstrated that ResNet-50 models can drop from 87% to 9% accuracy under FGSM attacks, but adversarial training can recover 55% robustness. This work is crucial for deploying AI systems in safety-critical applications.
+
+## Professional Experience
+
+I bring extensive industry experience from leading companies like **Interswitch** and **Jego Pods**, where I've:
+- Developed ML models for autonomous vehicle object detection and tracking
+- Built predictive algorithms for energy demand forecasting
+- Led data science research in healthcare analytics
+- Architected scalable microservices that improved system performance by 50%+
+
+## Technical Skills
+
+**Programming:** Python, Java, JavaScript  
+**ML/AI:** PyTorch, NumPy, Pandas, Scikit-learn  
+**Cloud & Infrastructure:** AWS, PostgreSQL, MongoDB  
+**Specializations:** Computer Vision, MLOps, Adversarial ML
+
+I'm excited to contribute to cutting-edge AI research and am currently applying to the **Cohere Labs Scholar Program** to further advance my work in language models and AI safety.
+
+Feel free to reach out if you'd like to collaborate on research projects or discuss opportunities in AI/ML!

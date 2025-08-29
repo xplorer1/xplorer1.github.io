@@ -1,81 +1,64 @@
 ---
 layout: page
-title: project 1
-description: with background image
+title: Adversarial Robustness Research
+description: Evaluating Model Robustness to Adversarial Attacks on CIFAR-10
 img: assets/img/12.jpg
 importance: 1
-category: work
+category: research
 related_publications: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+## Evaluating Model Robustness to Adversarial Attacks
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+This research project investigates the vulnerability of deep learning models to adversarial attacks and explores methods to improve their robustness. The study focuses on ResNet-50 models trained on the CIFAR-10 dataset, examining their performance under various adversarial attack scenarios.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+### Key Findings
+
+Our research revealed critical insights about model vulnerability:
+- **Baseline Performance**: ResNet-50 models achieve 87% accuracy on clean CIFAR-10 test data
+- **Attack Vulnerability**: Under Fast Gradient Sign Method (FGSM) attacks, accuracy drops dramatically to just 9%
+- **Robustness Recovery**: Through adversarial training, we successfully recovered 55% of the model's robustness
+
+### Technical Approach
+
+The project implemented several key components:
+1. **Adversarial Attack Generation**: Implemented FGSM and other attack methods using PyTorch
+2. **Model Training**: Trained ResNet-50 models with both standard and adversarial training approaches
+3. **Evaluation Framework**: Developed comprehensive metrics to assess model robustness
+4. **Defense Strategies**: Explored various defense mechanisms including adversarial training
+
+### Significance for AI Safety
+
+This work is particularly relevant for deploying AI systems in safety-critical applications where adversarial robustness is essential. The findings contribute to the broader field of AI safety and trustworthy machine learning.
+
+### Technologies Used
+
+- **PyTorch** for deep learning implementation
+- **NumPy** for numerical computations
+- **CIFAR-10** dataset for evaluation
+- **ResNet-50** architecture as the base model
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="Adversarial Attack Visualization" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="Robustness Metrics" class="img-fluid rounded z-depth-1" %}
     </div>
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="Training Progress" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
+    Visualization of adversarial attacks, robustness metrics, and training progress throughout the research project.
 </div>
 
-You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
-Say you wanted to write a bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+### Future Work
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+This research opens several promising directions:
+- Exploring more sophisticated attack methods
+- Investigating transfer learning for robust models
+- Developing theoretical frameworks for understanding adversarial vulnerability
+- Applying findings to larger-scale models and datasets
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
+The project demonstrates the importance of considering adversarial robustness in machine learning system design and contributes valuable insights to the AI safety community.
