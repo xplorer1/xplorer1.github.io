@@ -21,14 +21,14 @@ ninja.data = [{
           description: "a selection of my projects",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/_pages/projects/";
+            window.location.href = "/projects/";
           },
         },{id: "nav-repositories",
           title: "repositories",
           description: "a selection of my repositories",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/_pages/repositories/";
+            window.location.href = "/repositories/";
           },
         },{id: "nav-cv",
           title: "cv",
