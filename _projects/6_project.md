@@ -1,80 +1,87 @@
 ---
 layout: page
-title: project 6
-description: a project with no image
-img:
-importance: 4
-category: fun
+title: Multimodal Emotion Recognition
+description: Audio, Vision, Text, and Gestures for Enhanced Emotion Understanding
+img: assets/img/12.jpg
+importance: 1
+category: research
+related_publications: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+## Multimodal Emotion Recognition: Audio, Vision, Text, and Gestures
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+This research project investigates whether combining multiple modalities (speech audio, facial images, textual transcripts, and hand gestures) yields significant improvements over unimodal emotion recognition systems. The study addresses the fundamental challenge that emotions are conveyed through complex combinations of cues that single-modality systems often miss.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+### Research Question
+
+**Does combining modalities (audio, facial expressions, hand gestures, and text) improve emotion recognition performance compared to unimodal models?**
+
+### Key Findings
+
+Our multimodal approach achieved significant improvements:
+- **Unimodal Baselines**: Individual modalities achieved ~55% accuracy and macro-F1 scores
+- **Multimodal Fusion**: Combined approach reached **75% accuracy** with improved robustness
+- **Cross-Modal Benefits**: Complementary cues resolved ambiguities that single modalities couldn't handle
+
+### Technical Approach
+
+#### 1. Dataset Integration
+- **RAVDESS**: Professional actor recordings across 8 emotions (neutral, calm, happy, sad, angry, fearful, surprise, disgust)
+- **FER2013**: 35,887 facial expression images with 7 emotion categories
+- **Transcripts**: ASR-generated text using Whisper for speech content analysis
+- **Gesture Landmarks**: MediaPipe Hands extraction for 21 landmark coordinates over time
+
+#### 2. Model Architecture
+- **Unimodal Baselines**: Established performance benchmarks for each modality
+- **Early Fusion**: Combined raw features before classification
+- **Late Fusion**: Merged modality-specific predictions for final classification
+- **Modern Architectures**: Used state-of-the-art CNN and transformer models
+
+#### 3. Fusion Strategies
+- **Feature-Level Fusion**: Concatenated modality-specific features
+- **Decision-Level Fusion**: Weighted combination of modality predictions
+- **Attention Mechanisms**: Learned importance weights for different modalities
+
+### Significance
+
+This work addresses critical limitations in current emotion recognition systems:
+- **Ambiguity Resolution**: Multiple modalities provide complementary information
+- **Robustness**: System continues working even when some modalities are unavailable
+- **Real-World Applicability**: Better suited for natural, unconstrained environments
+- **Accessibility**: Can work in various lighting, audio, and visibility conditions
+
+### Technologies Used
+
+- **PyTorch** for deep learning implementation
+- **MediaPipe** for hand gesture landmark extraction
+- **Whisper** for automatic speech recognition
+- **OpenCV** for facial expression processing
+- **NumPy/Pandas** for data manipulation and analysis
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/pdf/Multimodal_Emotion_Recognition.pdf" title="Full Research Paper" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
+    Download the complete research paper for detailed methodology, results, and analysis.
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+### Future Work
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+This research opens several promising directions:
+- **Cross-Cultural Validation**: Testing on diverse cultural and linguistic datasets
+- **Real-Time Implementation**: Optimizing for live emotion recognition applications
+- **Personalization**: Adapting models to individual users' expression patterns
+- **Multilingual Support**: Extending to non-English speech and text
+- **Clinical Applications**: Exploring use in mental health and therapy settings
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+### Impact on AI Development
 
-{% raw %}
+This work contributes to the broader field of multimodal AI systems, demonstrating how combining different data sources can create more robust and human-like understanding. The findings are particularly relevant for:
+- **Human-Computer Interaction**: More natural and responsive interfaces
+- **Assistive Technologies**: Better support for users with communication challenges
+- **Education**: Enhanced learning analytics and student engagement monitoring
+- **Healthcare**: Improved patient monitoring and mental health assessment
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
+The project showcases the power of multimodal approaches in AI and provides a foundation for building more comprehensive emotion understanding systems.
