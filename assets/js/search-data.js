@@ -130,21 +130,6 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "projects-multimodal-emotion-recognition",
-          title: 'Multimodal Emotion Recognition',
-          description: "Audio, Vision, Text, and Gestures for Enhanced Emotion Understanding",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/10_project/";
-            },},{id: "projects-cognitive-offloading-in-ai-assisted-coding",
-          title: 'Cognitive Offloading in AI-Assisted Coding',
-          description: "Self-Experiment on AI-Assisted versus Manual Coding Effects",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/11_project/";
-            },},{id: "projects-physics-visualization-amp-simulation",
-          title: 'Physics Visualization &amp;amp; Simulation',
-          description: "Brownian Motion and Wave Mechanics Simulations",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/12_project/";
             },},{id: "projects-adversarial-robustness-research",
           title: 'Adversarial Robustness Research',
           description: "Evaluating Model Robustness to Adversarial Attacks on CIFAR-10",
@@ -170,26 +155,16 @@ ninja.data = [{
           description: "Building a Fully Featured Linux Shell from Scratch in C",
           section: "Projects",handler: () => {
               window.location.href = "/projects/5_project/";
-            },},{id: "projects-project-6",
-          title: 'project 6',
-          description: "a project with no image",
+            },},{id: "projects-multimodal-emotion-recognition",
+          title: 'Multimodal Emotion Recognition',
+          description: "Audio, Vision, Text, and Gestures for Enhanced Emotion Understanding",
           section: "Projects",handler: () => {
               window.location.href = "/projects/6_project/";
-            },},{id: "projects-project-7",
-          title: 'project 7',
-          description: "with background image",
+            },},{id: "projects-cognitive-offloading-in-ai-assisted-coding",
+          title: 'Cognitive Offloading in AI-Assisted Coding',
+          description: "Self-Experiment on AI-Assisted versus Manual Coding Effects",
           section: "Projects",handler: () => {
               window.location.href = "/projects/7_project/";
-            },},{id: "projects-project-8",
-          title: 'project 8',
-          description: "an other project with a background image and giscus comments",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/8_project/";
-            },},{id: "projects-project-9",
-          title: 'project 9',
-          description: "another project with an image 🎉",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/9_project/";
             },},{
         id: 'social-email',
         title: 'email',
