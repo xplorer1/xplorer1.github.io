@@ -471,6 +471,21 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
+            },},{id: "projects-multimodal-emotion-recognition",
+          title: 'Multimodal Emotion Recognition',
+          description: "Audio, Vision, Text, and Gestures for Enhanced Emotion Understanding",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/10_project/";
+            },},{id: "projects-cognitive-offloading-in-ai-assisted-coding",
+          title: 'Cognitive Offloading in AI-Assisted Coding',
+          description: "Self-Experiment on AI-Assisted versus Manual Coding Effects",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/11_project/";
+            },},{id: "projects-physics-visualization-amp-simulation",
+          title: 'Physics Visualization &amp;amp; Simulation',
+          description: "Brownian Motion and Wave Mechanics Simulations",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/12_project/";
             },},{id: "projects-adversarial-robustness-research",
           title: 'Adversarial Robustness Research',
           description: "Evaluating Model Robustness to Adversarial Attacks on CIFAR-10",
