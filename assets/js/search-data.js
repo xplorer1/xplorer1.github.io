@@ -11,10 +11,10 @@ ninja.data = [{
     },
   },{id: "nav-blog",
           title: "blog",
-          description: "",
+          description: "a selection of my blog posts",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/blog/";
+            window.location.href = "/_pages/blog/";
           },
         },{id: "nav-projects",
           title: "projects",
@@ -37,27 +37,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "nav-teaching",
-          title: "teaching",
-          description: "a selection of my teaching",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/_pages/teaching/";
-          },
-        },{id: "nav-profiles",
-          title: "profiles",
-          description: "a selection of my profiles",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/_pages/profiles/";
-          },
-        },{id: "nav-dropdown",
-          title: "dropdown",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/_pages/dropdown/";
-          },
         },{id: "post-a-post-with-plotly-js",
         
           title: "a post with plotly.js",
@@ -67,6 +46,72 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2025/plotly/";
+          
+        },
+      },{id: "post-hoppscotch-api-live-sync-part-1-introduction",
+        
+          title: "Hoppscotch API Live Sync - Part 1: Introduction",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/hoppscotch-api-live-sync/";
+          
+        },
+      },{id: "post-api-live-sync-part-6-sync-engine",
+        
+          title: "API Live Sync Part 6: Sync Engine",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/api-live-sync-6-sync-engine/";
+          
+        },
+      },{id: "post-api-live-sync-part-5-file-watching",
+        
+          title: "API Live Sync Part 5: File Watching",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/api-live-sync-5-file-watching/";
+          
+        },
+      },{id: "post-api-live-sync-part-4-openai-fetcher",
+        
+          title: "API Live Sync Part 4: OpenAI Fetcher",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/api-live-sync-4-openai-fetcher/";
+          
+        },
+      },{id: "post-api-live-sync-part-3-live-sync-service",
+        
+          title: "API Live Sync Part 3: Live Sync Service",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/api-live-sync-3-service/";
+          
+        },
+      },{id: "post-api-live-sync-part-2-live-source-data-structures-and-types",
+        
+          title: "API Live Sync Part 2: Live Source Data Structures and Types",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/api-live-sync-2-data-structures/";
           
         },
       },{id: "post-a-post-with-image-galleries",
@@ -426,18 +471,7 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
-          description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
-          description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "news-started-my-master-s-degree-at-carnegie-mellon-university",
-          title: 'Started my master’s degree at Carnegie Mellon University',
-          description: "",
-          section: "News",},{id: "projects-adversarial-robustness-research",
+            },},{id: "projects-adversarial-robustness-research",
           title: 'Adversarial Robustness Research',
           description: "Evaluating Model Robustness to Adversarial Attacks on CIFAR-10",
           section: "Projects",handler: () => {
