@@ -39,7 +39,7 @@ ninja.data = [{
           },
         },{id: "nav-cv",
           title: "cv",
-          description: "Chijioke Ugwuanyi - Machine Learning Engineer &amp; Researcher at Carnegie Mellon University",
+          description: "Chijioke Ugwuanyi",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
