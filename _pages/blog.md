@@ -1,5 +1,6 @@
 ---
 layout: page
+permalink: /blog/
 title: blog
 description: a selection of my blog posts
 nav: true
