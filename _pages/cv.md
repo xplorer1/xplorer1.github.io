@@ -5,13 +5,12 @@ title: cv
 nav: true
 nav_order: 5
 cv_pdf: Chijioke_Ugwuanyi_CV.pdf # you can also use external links here
-description: Chijioke Ugwuanyi - Machine Learning Engineer & Researcher at Carnegie Mellon University
+description: Chijioke Ugwuanyi
 toc:
   sidebar: left
 ---
 
 ## Chijioke Ugwuanyi
-**Machine Learning Engineer & Researcher**  
 Carnegie Mellon University | M.Sc. Information Technology (2024-2025)
 
 ---
