@@ -13,7 +13,6 @@ description: > # the ">" symbol means to ignore newlines until "footer_text:"
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
 keywords: machine learning, artificial intelligence, adversarial robustness, computer vision, MLOps, deep learning, PyTorch, autonomous vehicles, AI safety, Cohere Labs Scholar, Carnegie Mellon University, research, software engineering
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
@@ -87,7 +86,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 blog_name: Chijioke's Research Blog # blog_name will be displayed in your blog page
-blog_description: Research updates, technical insights, and thoughts on machine learning, AI safety, and computer vision
+blog_description: Research updates, technical insights, and thoughts on machine learning, AI safety, and other fun stuffs.
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
