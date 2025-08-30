@@ -90,7 +90,7 @@ This research provides valuable insights for educational institutions:
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/pdf/Cognitive_Offloading.pdf" title="Full Research Paper" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="https://drive.google.com/file/d/1OGQWxFN3tF2wHmnn0IGdRTdg__x5ji2F/view?usp=sharing" title="Full Research Paper" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">

@@ -45,21 +45,6 @@ The goal was to create a comprehensive computer vision system that could:
 - **Cloud Computing**: AWS for scalable training and deployment
 - **Version Control**: Git for collaborative development
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="Object Detection Results" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="Tracking Visualization" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="Road Quality Assessment" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Results from object detection, multi-object tracking, and road quality assessment algorithms.
-</div>
-
 ### Key Achievements
 
 - **Improved Detection Accuracy**: Achieved 95%+ accuracy on standard autonomous driving benchmarks

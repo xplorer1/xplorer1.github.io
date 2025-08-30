@@ -55,7 +55,7 @@ This work is particularly relevant for deploying AI systems in safety-critical a
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/pdf/Adversarial_Robustness_Study (1).pdf" title="Full Research Paper" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="https://drive.google.com/file/d/1vW_HLv3ievRUWr9l277RfO0Am09W9Br1/view?usp=sharing" title="Full Research Paper" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">

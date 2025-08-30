@@ -91,21 +91,6 @@ The implementation leveraged several key Linux system calls:
 - **Challenge**: Complex file descriptor manipulation for redirection
 - **Solution**: Used dup2() system calls with proper error checking
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="Shell Architecture" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="Process Flow" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="Command Execution" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Overview of shell architecture, process flow diagrams, and command execution flow.
-</div>
-
 ### Testing and Validation
 
 #### Test Cases
