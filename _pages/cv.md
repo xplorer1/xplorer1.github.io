@@ -4,7 +4,7 @@ permalink: /cv/
 title: cv
 nav: true
 nav_order: 4
-cv_pdf: Chijioke_Ugwuanyi_CV.pdf # you can also use external links here
+cv_pdf: chijioke-ugwuanyi-cv.pdf # you can also use external links here
 description: Chijioke Ugwuanyi - Machine Learning Engineer & Researcher at Carnegie Mellon University
 toc:
   sidebar: left
