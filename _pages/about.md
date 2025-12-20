@@ -6,7 +6,7 @@ subtitle: Hi, Welcome to my page.
 
 profile:
   align: right
-  image: prof_pic_main.jpg
+  image: recent.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Carnegie Mellon University</p>
