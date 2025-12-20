@@ -17,11 +17,12 @@ In this second part of the series, I dive deep into the core data structures and
 The API Live Sync system relies on several key data structures to efficiently manage and synchronize API specifications:
 
 #### 1. Live Source Configuration
+
 ```typescript
 interface LiveSourceConfig {
   id: string;
   name: string;
-  type: 'openapi' | 'graphql' | 'postman';
+  type: "openapi" | "graphql" | "postman";
   url?: string;
   filePath?: string;
   refreshInterval: number;
@@ -30,6 +31,7 @@ interface LiveSourceConfig {
 ```
 
 #### 2. API Specification Schema
+
 ```typescript
 interface APISpecification {
   version: string;
@@ -42,11 +44,12 @@ interface APISpecification {
 ```
 
 #### 3. Sync Status Tracking
+
 ```typescript
 interface SyncStatus {
   sourceId: string;
   lastSync: Date;
-  status: 'success' | 'failed' | 'pending';
+  status: "success" | "failed" | "pending";
   errorMessage?: string;
   changesDetected: boolean;
 }

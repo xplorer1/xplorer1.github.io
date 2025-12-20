@@ -15,6 +15,7 @@ This project involved implementing a fully featured Linux shell from the ground 
 ### Project Overview
 
 The Plaid Shell project aimed to replicate core functionality of standard Unix shells like bash, including:
+
 - Command parsing and execution
 - Process creation and management
 - Built-in shell commands
@@ -25,18 +26,21 @@ The Plaid Shell project aimed to replicate core functionality of standard Unix s
 ### Technical Implementation
 
 #### Command Parsing System
+
 - **Lexical Analysis**: Implemented tokenizer to parse command strings
 - **Command Structure**: Created data structures to represent parsed commands
 - **Argument Handling**: Proper parsing of command arguments and flags
 - **Quoting Support**: Handled single and double quotes in command strings
 
 #### Process Management
+
 - **Fork and Exec**: Implemented process creation using system calls
 - **Signal Handling**: Added support for common signals (SIGINT, SIGTERM)
 - **Background Processes**: Support for running commands in background
 - **Job Control**: Basic job management and process status tracking
 
 #### Built-in Commands
+
 - **cd**: Directory navigation with proper path resolution
 - **pwd**: Print working directory functionality
 - **echo**: Command output with variable expansion
@@ -44,6 +48,7 @@ The Plaid Shell project aimed to replicate core functionality of standard Unix s
 - **history**: Command history tracking and recall
 
 #### Advanced Features
+
 - **I/O Redirection**: Support for input (<) and output (>) redirection
 - **Pipelines**: Command chaining using pipes (|)
 - **Environment Variables**: Full environment variable support and expansion
@@ -52,6 +57,7 @@ The Plaid Shell project aimed to replicate core functionality of standard Unix s
 ### Core System Calls Used
 
 The implementation leveraged several key Linux system calls:
+
 - **fork()**: Process creation
 - **execvp()**: Program execution
 - **wait()**: Process synchronization
@@ -62,12 +68,14 @@ The implementation leveraged several key Linux system calls:
 ### Code Architecture
 
 #### Modular Design
+
 - **Parser Module**: Handles command string parsing
 - **Executor Module**: Manages process execution
 - **Built-ins Module**: Implements shell built-in commands
 - **Utilities Module**: Common helper functions
 
 #### Data Structures
+
 - **Command Structure**: Represents parsed commands with arguments
 - **Process Table**: Tracks running processes and their status
 - **Environment Table**: Manages environment variables
@@ -76,24 +84,29 @@ The implementation leveraged several key Linux system calls:
 ### Key Challenges and Solutions
 
 #### Process Management
+
 - **Challenge**: Proper handling of parent-child process relationships
 - **Solution**: Implemented robust fork-exec-wait pattern with error handling
 
 #### Memory Management
+
 - **Challenge**: Avoiding memory leaks in dynamic command parsing
 - **Solution**: Systematic memory allocation and deallocation with proper cleanup
 
 #### Signal Handling
+
 - **Challenge**: Graceful handling of interrupt signals
 - **Solution**: Implemented signal handlers that properly clean up child processes
 
 #### I/O Redirection
+
 - **Challenge**: Complex file descriptor manipulation for redirection
 - **Solution**: Used dup2() system calls with proper error checking
 
 ### Testing and Validation
 
 #### Test Cases
+
 - **Basic Commands**: ls, cat, grep, find, etc.
 - **Built-ins**: cd, pwd, echo, export
 - **Redirection**: Input/output redirection with files
@@ -101,6 +114,7 @@ The implementation leveraged several key Linux system calls:
 - **Error Handling**: Invalid commands and error conditions
 
 #### Performance Metrics
+
 - **Startup Time**: Minimal shell initialization overhead
 - **Command Execution**: Fast command parsing and execution
 - **Memory Usage**: Efficient memory management
@@ -109,6 +123,7 @@ The implementation leveraged several key Linux system calls:
 ### Learning Outcomes
 
 This project provided valuable insights into:
+
 - **Systems Programming**: Deep understanding of Linux system calls
 - **Process Management**: How operating systems handle processes
 - **Memory Management**: Proper C programming practices
@@ -118,6 +133,7 @@ This project provided valuable insights into:
 ### Future Enhancements
 
 The shell could be extended with:
+
 - **Advanced Scripting**: Support for shell scripts and control structures
 - **Job Control**: Full job control with fg, bg, and jobs commands
 - **Tab Completion**: Command and filename completion
@@ -127,6 +143,7 @@ The shell could be extended with:
 ### Significance
 
 This project demonstrates:
+
 - **Low-level Programming**: Strong C programming and systems knowledge
 - **OS Understanding**: Deep knowledge of operating system internals
 - **Problem Solving**: Ability to tackle complex systems programming challenges

@@ -15,6 +15,7 @@ This research project investigates the vulnerability of deep learning models to 
 ### Key Findings
 
 Our research revealed critical insights about model vulnerability:
+
 - **Baseline Performance**: ResNet-50 models achieve 87% accuracy on clean CIFAR-10 test data
 - **Attack Vulnerability**: Under Fast Gradient Sign Method (FGSM) attacks, accuracy drops dramatically to just 9%
 - **Robustness Recovery**: Through adversarial training, we successfully recovered 55% of the model's robustness
@@ -22,6 +23,7 @@ Our research revealed critical insights about model vulnerability:
 ### Technical Approach
 
 The project implemented several key components:
+
 1. **Adversarial Attack Generation**: Implemented FGSM and other attack methods using PyTorch
 2. **Model Training**: Trained ResNet-50 models with both standard and adversarial training approaches
 3. **Evaluation Framework**: Developed comprehensive metrics to assess model robustness
@@ -65,6 +67,7 @@ This work is particularly relevant for deploying AI systems in safety-critical a
 ### Future Work
 
 This research opens several promising directions:
+
 - Exploring more sophisticated attack methods
 - Investigating transfer learning for robust models
 - Developing theoretical frameworks for understanding adversarial vulnerability

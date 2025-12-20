@@ -82,12 +82,7 @@
       "startDate": "2017-06-01",
       "endDate": "2020-11-01",
       "summary": "Architected and maintained 3 software solutions, re-engineered existing software for sub-1-second load times, and upgraded to cloud-based systems with 50%+ scaling improvement.",
-      "highlights": [
-        "Software architecture and design",
-        "Performance optimization",
-        "Cloud migration",
-        "50%+ productivity enhancement"
-      ]
+      "highlights": ["Software architecture and design", "Performance optimization", "Cloud migration", "50%+ productivity enhancement"]
     }
   ],
   "volunteer": [

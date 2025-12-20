@@ -15,6 +15,7 @@ This project focuses on developing advanced computer vision algorithms for auton
 ### Project Overview
 
 The goal was to create a comprehensive computer vision system that could:
+
 - Detect and classify various road objects (vehicles, pedestrians, traffic signs)
 - Track objects across multiple frames for trajectory prediction
 - Handle challenging environmental conditions (low light, weather, occlusions)
@@ -23,16 +24,19 @@ The goal was to create a comprehensive computer vision system that could:
 ### Technical Implementation
 
 #### Object Detection Pipeline
+
 - **Multi-scale Feature Extraction**: Implemented feature pyramid networks for detecting objects at various scales
 - **Real-time Processing**: Optimized algorithms to achieve sub-100ms inference times
 - **Robust Classification**: Trained models on diverse datasets to handle edge cases
 
 #### Tracking System
+
 - **Multi-object Tracking**: Developed algorithms to maintain object identity across frames
 - **Trajectory Prediction**: Implemented Kalman filtering for motion prediction
 - **Association Logic**: Built robust data association methods for tracking consistency
 
 #### Road Quality Assessment
+
 - **Surface Analysis**: Created algorithms to classify road conditions (good, fair, poor)
 - **Damage Detection**: Implemented specialized models for identifying road damage patterns
 - **Real-time Mapping**: Integrated with GPS systems for road quality mapping
@@ -55,6 +59,7 @@ The goal was to create a comprehensive computer vision system that could:
 ### Impact and Applications
 
 This work directly contributed to:
+
 - **Safety Enhancement**: Improved perception capabilities for autonomous vehicles
 - **Infrastructure Mapping**: Better road quality assessment for maintenance planning
 - **Research Advancement**: Contributed to the broader field of autonomous vehicle perception
@@ -63,6 +68,7 @@ This work directly contributed to:
 ### Future Directions
 
 The project opens several exciting research avenues:
+
 - Integration with LiDAR and radar sensors for multi-modal perception
 - Advanced trajectory prediction using transformer architectures
 - Real-time adaptation to changing environmental conditions

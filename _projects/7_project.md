@@ -19,6 +19,7 @@ This research project documents a week-long self-experiment designed to compare 
 ### Experimental Design
 
 The experiment spanned seven consecutive days with alternating conditions:
+
 - **AI-Assisted Days** (Days 1, 3, 5, 7): Used Cursor AI coding assistant with enforced reflection
 - **Manual Coding Days** (Days 2, 4, 6): Traditional coding without AI assistance
 - **Controlled Variables**: Comparable algorithmic and debugging problems from LeetCode
@@ -28,12 +29,14 @@ The experiment spanned seven consecutive days with alternating conditions:
 Our controlled experiment revealed important insights about AI-assisted development:
 
 #### Performance Metrics
+
 - **Time to Completion**: AI assistance reduced completion time by ~35% (30 min vs 45 min average)
 - **Error Rates**: AI-assisted coding showed lower error rates (5.0% vs 8.5% average)
 - **Reproducibility**: Manual coding achieved higher reproducibility scores (0.85 vs 0.73 average)
 - **Reflection Quality**: Both conditions maintained high reflection quality (4.2-4.7 range)
 
 #### Cognitive Impact
+
 - **Productivity Gains**: AI tools significantly accelerate problem-solving
 - **Cognitive Offloading**: Some delegation of thinking to external aids
 - **Reflection Mitigation**: Enforced reflection helps maintain critical engagement
@@ -42,12 +45,14 @@ Our controlled experiment revealed important insights about AI-assisted developm
 ### Methodology
 
 #### Data Collection
+
 - **Quantitative Metrics**: Time, error rates, reproducibility scores
 - **Qualitative Assessment**: Reflection quality evaluation using ChatGPT-5 rubric
 - **Controlled Conditions**: Equivalent problem sets across different days
 - **24-Hour Delay Testing**: Reproducibility assessment after time delay
 
 #### Reflection Protocol
+
 - **AI-Assisted Days**: Required written explanation of AI suggestions before use
 - **Manual Days**: Self-explanation of solution approaches
 - **Quality Assessment**: Standardized rubric for reflection evaluation
@@ -57,24 +62,26 @@ Our controlled experiment revealed important insights about AI-assisted developm
 
 The data shows clear trade-offs between AI assistance and manual coding:
 
-| Metric | AI-Assisted | Manual | Improvement |
-|--------|-------------|---------|-------------|
-| Time (min) | 30 | 45 | +33% faster |
-| Error Rate (%) | 5.0 | 8.5 | -41% errors |
-| Reproducibility | 0.73 | 0.85 | -14% retention |
-| Reflection Quality | 4.2 | 4.6 | Comparable |
+| Metric             | AI-Assisted | Manual | Improvement    |
+| ------------------ | ----------- | ------ | -------------- |
+| Time (min)         | 30          | 45     | +33% faster    |
+| Error Rate (%)     | 5.0         | 8.5    | -41% errors    |
+| Reproducibility    | 0.73        | 0.85   | -14% retention |
+| Reflection Quality | 4.2         | 4.6    | Comparable     |
 
 ### Educational Implications
 
 This research provides valuable insights for educational institutions:
 
 #### Integration Strategies
+
 - **Hybrid Approaches**: Combine AI tools with reflection requirements
 - **Balanced Practice**: Alternate between AI-assisted and manual coding
 - **Academic Integrity**: Maintain rigor while leveraging productivity benefits
 - **Critical Engagement**: Use AI as a tool for learning, not replacement
 
 #### Assessment Design
+
 - **Reflection Requirements**: Mandate explanation of AI-generated solutions
 - **Mixed Modalities**: Vary between assisted and independent problem-solving
 - **Long-term Retention**: Test understanding beyond immediate implementation
@@ -100,6 +107,7 @@ This research provides valuable insights for educational institutions:
 ### Future Work
 
 This experiment opens several research directions:
+
 - **Larger Sample Sizes**: Extend to multiple participants and longer durations
 - **Reflection Protocols**: Optimize reflection methods for maximum learning benefit
 - **Different AI Tools**: Compare various coding assistants and their effects
@@ -109,6 +117,7 @@ This experiment opens several research directions:
 ### Impact on AI Education
 
 This work contributes to the critical conversation about AI integration in education:
+
 - **Balanced Approach**: Demonstrates how to use AI responsibly in learning
 - **Cognitive Awareness**: Highlights the importance of maintaining critical thinking
 - **Best Practices**: Provides evidence-based guidelines for AI-assisted education

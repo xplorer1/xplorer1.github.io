@@ -17,10 +17,11 @@ In this fourth part, I explore how we integrated OpenAI's capabilities to enhanc
 The OpenAI Fetcher component leverages artificial intelligence to automatically detect and parse API specifications from various sources, making the sync process more intelligent and accurate.
 
 #### OpenAI Integration
+
 ```typescript
 interface OpenAIFetcherConfig {
   apiKey: string;
-  model: 'gpt-4' | 'gpt-3.5-turbo';
+  model: "gpt-4" | "gpt-3.5-turbo";
   maxTokens: number;
   temperature: number;
   timeout: number;
@@ -28,17 +29,18 @@ interface OpenAIFetcherConfig {
 ```
 
 #### Core Fetcher Interface
+
 ```typescript
 interface OpenAIFetcher {
   // API specification extraction
   extractAPISpec(content: string): Promise<APISpecification>;
-  
+
   // Schema validation and enhancement
   validateSchema(schema: any): Promise<ValidationResult>;
-  
+
   // Intelligent field mapping
   mapFields(sourceSchema: any, targetSchema: any): Promise<FieldMapping>;
-  
+
   // Error correction and suggestions
   suggestImprovements(spec: APISpecification): Promise<ImprovementSuggestion[]>;
 }

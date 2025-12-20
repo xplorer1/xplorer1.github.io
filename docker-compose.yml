@@ -13,16 +13,16 @@ services:
     #     USERID: # id -u
     #     USERNAME: # echo $USER
     ports:
-      - "4000:4000"  # Standard Jekyll port
-      - "35729:35729"  # LiveReload port
+      - "4000:4000" # Standard Jekyll port
+      - "35729:35729" # LiveReload port
     volumes:
       - .:/srv/jekyll
-      - .:/srv/jekyll/site  # Additional volume for site generation
+      - .:/srv/jekyll/site # Additional volume for site generation
     environment:
       - JEKYLL_ENV=development
       - JEKYLL_LIVERELOAD=true
       - JEKYLL_LIVERELOAD_PORT=35729
-      - JEKYLL_FORCE_POLLING=true  # Better file watching on Windows
+      - JEKYLL_FORCE_POLLING=true # Better file watching on Windows
     command: >
       bundle exec jekyll serve 
       --host 0.0.0.0 

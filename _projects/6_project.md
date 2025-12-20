@@ -19,6 +19,7 @@ This research project investigates whether combining multiple modalities (speech
 ### Key Findings
 
 Our multimodal approach achieved significant improvements:
+
 - **Unimodal Baselines**: Individual modalities achieved ~55% accuracy and macro-F1 scores
 - **Multimodal Fusion**: Combined approach reached **75% accuracy** with improved robustness
 - **Cross-Modal Benefits**: Complementary cues resolved ambiguities that single modalities couldn't handle
@@ -26,18 +27,21 @@ Our multimodal approach achieved significant improvements:
 ### Technical Approach
 
 #### 1. Dataset Integration
+
 - **RAVDESS**: Professional actor recordings across 8 emotions (neutral, calm, happy, sad, angry, fearful, surprise, disgust)
 - **FER2013**: 35,887 facial expression images with 7 emotion categories
 - **Transcripts**: ASR-generated text using Whisper for speech content analysis
 - **Gesture Landmarks**: MediaPipe Hands extraction for 21 landmark coordinates over time
 
 #### 2. Model Architecture
+
 - **Unimodal Baselines**: Established performance benchmarks for each modality
 - **Early Fusion**: Combined raw features before classification
 - **Late Fusion**: Merged modality-specific predictions for final classification
 - **Modern Architectures**: Used state-of-the-art CNN and transformer models
 
 #### 3. Fusion Strategies
+
 - **Feature-Level Fusion**: Concatenated modality-specific features
 - **Decision-Level Fusion**: Weighted combination of modality predictions
 - **Attention Mechanisms**: Learned importance weights for different modalities
@@ -45,6 +49,7 @@ Our multimodal approach achieved significant improvements:
 ### Significance
 
 This work addresses critical limitations in current emotion recognition systems:
+
 - **Ambiguity Resolution**: Multiple modalities provide complementary information
 - **Robustness**: System continues working even when some modalities are unavailable
 - **Real-World Applicability**: Better suited for natural, unconstrained environments
@@ -70,6 +75,7 @@ This work addresses critical limitations in current emotion recognition systems:
 ### Future Work
 
 This research opens several promising directions:
+
 - **Cross-Cultural Validation**: Testing on diverse cultural and linguistic datasets
 - **Real-Time Implementation**: Optimizing for live emotion recognition applications
 - **Personalization**: Adapting models to individual users' expression patterns
@@ -79,6 +85,7 @@ This research opens several promising directions:
 ### Impact on AI Development
 
 This work contributes to the broader field of multimodal AI systems, demonstrating how combining different data sources can create more robust and human-like understanding. The findings are particularly relevant for:
+
 - **Human-Computer Interaction**: More natural and responsive interfaces
 - **Assistive Technologies**: Better support for users with communication challenges
 - **Education**: Enhanced learning analytics and student engagement monitoring

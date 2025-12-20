@@ -17,6 +17,7 @@ In this final part of the series, I explore the core Sync Engine that brings tog
 The Sync Engine is the heart of the system, orchestrating the entire synchronization process and ensuring data consistency across all sources.
 
 #### Engine Architecture
+
 ```typescript
 interface SyncEngine {
   // Core sync operations
@@ -24,12 +25,12 @@ interface SyncEngine {
   stopSync(): Promise<void>;
   pauseSync(): Promise<void>;
   resumeSync(): Promise<void>;
-  
+
   // Sync management
   addSyncJob(job: SyncJob): Promise<void>;
   removeSyncJob(jobId: string): Promise<void>;
   getSyncStatus(): SyncEngineStatus;
-  
+
   // Configuration
   updateConfig(config: SyncEngineConfig): Promise<void>;
   getConfig(): SyncEngineConfig;
@@ -37,16 +38,17 @@ interface SyncEngine {
 ```
 
 #### Sync Job Definition
+
 ```typescript
 interface SyncJob {
   id: string;
   sourceId: string;
-  priority: 'high' | 'medium' | 'low';
+  priority: "high" | "medium" | "low";
   retryCount: number;
   maxRetries: number;
   lastAttempt: Date;
   nextAttempt: Date;
-  status: 'pending' | 'running' | 'completed' | 'failed';
+  status: "pending" | "running" | "completed" | "failed";
 }
 ```
 
@@ -56,27 +58,20 @@ One of the most challenging aspects of synchronization is handling conflicts whe
 
 ```typescript
 class ConflictResolver {
-  async resolveConflict(
-    localSpec: APISpecification,
-    remoteSpec: APISpecification
-  ): Promise<ResolvedSpec> {
+  async resolveConflict(localSpec: APISpecification, remoteSpec: APISpecification): Promise<ResolvedSpec> {
     // Analyze differences
     const differences = this.analyzeDifferences(localSpec, remoteSpec);
-    
+
     // Apply conflict resolution strategies
     if (differences.conflicts.length === 0) {
       return this.mergeSpecs(localSpec, remoteSpec);
     }
-    
+
     // Use AI-powered conflict resolution
     return this.resolveWithAI(localSpec, remoteSpec, differences);
   }
-  
-  private async resolveWithAI(
-    local: APISpecification,
-    remote: APISpecification,
-    differences: DifferenceAnalysis
-  ): Promise<ResolvedSpec> {
+
+  private async resolveWithAI(local: APISpecification, remote: APISpecification, differences: DifferenceAnalysis): Promise<ResolvedSpec> {
     // Leverage OpenAI to intelligently resolve conflicts
     const prompt = this.buildConflictResolutionPrompt(local, remote, differences);
     const resolution = await this.openAI.resolveConflict(prompt);

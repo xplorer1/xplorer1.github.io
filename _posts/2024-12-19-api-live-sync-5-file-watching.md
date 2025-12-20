@@ -17,16 +17,17 @@ In this fifth part, I explore the file watching system that enables real-time de
 The file watching component is crucial for maintaining live synchronization, as it detects changes in API specification files and triggers immediate updates.
 
 #### File Watcher Interface
+
 ```typescript
 interface FileWatcher {
   // Watch management
   watchDirectory(path: string, options: WatchOptions): Promise<void>;
   unwatchDirectory(path: string): Promise<void>;
-  
+
   // Event handling
   onFileChange(callback: (event: FileChangeEvent) => void): void;
   onFileDelete(callback: (event: FileDeleteEvent) => void): void;
-  
+
   // Status and control
   isWatching(path: string): boolean;
   getWatchedPaths(): string[];
@@ -35,6 +36,7 @@ interface FileWatcher {
 ```
 
 #### Watch Options Configuration
+
 ```typescript
 interface WatchOptions {
   recursive: boolean;
@@ -62,17 +64,17 @@ File watching can be resource-intensive, so we've implemented several optimizati
 class OptimizedFileWatcher {
   private debounceTimers = new Map<string, NodeJS.Timeout>();
   private eventQueue: FileChangeEvent[] = [];
-  
+
   private debounceEvent(path: string, callback: () => void, delay: number) {
     if (this.debounceTimers.has(path)) {
       clearTimeout(this.debounceTimers.get(path)!);
     }
-    
+
     const timer = setTimeout(() => {
       callback();
       this.debounceTimers.delete(path);
     }, delay);
-    
+
     this.debounceTimers.set(path, timer);
   }
 }

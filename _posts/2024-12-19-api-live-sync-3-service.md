@@ -17,17 +17,18 @@ In this third installment, I explore the service layer implementation that orche
 The Live Sync Service acts as the central coordinator, managing multiple live sources and ensuring they stay synchronized with the main application state.
 
 #### Core Service Interface
+
 ```typescript
 interface LiveSyncService {
   // Source management
   addSource(config: LiveSourceConfig): Promise<void>;
   removeSource(sourceId: string): Promise<void>;
   updateSource(config: LiveSourceConfig): Promise<void>;
-  
+
   // Synchronization
   syncSource(sourceId: string): Promise<SyncResult>;
   syncAllSources(): Promise<SyncResult[]>;
-  
+
   // Status and monitoring
   getSourceStatus(sourceId: string): SyncStatus;
   getAllSourceStatuses(): SyncStatus[];
@@ -35,6 +36,7 @@ interface LiveSyncService {
 ```
 
 #### Service Implementation
+
 The service layer handles several critical responsibilities:
 
 1. **Source Management**: Adding, removing, and updating live source configurations
@@ -49,11 +51,11 @@ The service uses an event-driven approach to communicate with other parts of the
 
 ```typescript
 enum SyncEvents {
-  SOURCE_ADDED = 'source:added',
-  SOURCE_REMOVED = 'source:removed',
-  SYNC_STARTED = 'sync:started',
-  SYNC_COMPLETED = 'sync:completed',
-  SYNC_FAILED = 'sync:failed'
+  SOURCE_ADDED = "source:added",
+  SOURCE_REMOVED = "source:removed",
+  SYNC_STARTED = "sync:started",
+  SYNC_COMPLETED = "sync:completed",
+  SYNC_FAILED = "sync:failed",
 }
 ```
 

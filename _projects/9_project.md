@@ -19,16 +19,19 @@ Build an autonomous system where multiple AI agents collaborate to find and fix 
 ### Architecture Evolution
 
 **v1: CLI-Based System**
+
 - Researcher, Critic, and Planner agents using Ollama
 - Manual RAG implementation with FAISS and sentence-transformers
 - Shared context retrieval for agent collaboration
 
 **v2: Streamlit UI (Proof of Concept)**
+
 - Streamlit-based demo interface
 - Scout agent for GitHub issue discovery
 - UI blocking issues during LLM inference
 
 **v3: Production-Ready React + FastAPI**
+
 - WebSocket streaming for real-time updates
 - React frontend with component-level updates
 - FastAPI backend with async support for concurrent agents
@@ -67,6 +70,7 @@ Build an autonomous system where multiple AI agents collaborate to find and fix 
 ### Multi-Agent System
 
 **Scout Agent (Mistral 7B)**
+
 - Discovers beginner-friendly GitHub issues
 - Analyzes issue complexity and requirements
 - Provides context for the roundtable debate
@@ -74,13 +78,14 @@ Build an autonomous system where multiple AI agents collaborate to find and fix 
 **Roundtable Debate System**
 Three distinct AI personas collaborate on solutions:
 
-| Agent | Model | Philosophy |
-|-------|-------|------------|
-| **Conservative** | Llama 3.1 8B | "Minimal changes, maximum stability" |
-| **Innovative** | Mixtral 8x7B | "Let's do this the right way" |
-| **Quality** | CodeLlama 13B | "What could go wrong?" |
+| Agent            | Model         | Philosophy                           |
+| ---------------- | ------------- | ------------------------------------ |
+| **Conservative** | Llama 3.1 8B  | "Minimal changes, maximum stability" |
+| **Innovative**   | Mixtral 8x7B  | "Let's do this the right way"        |
+| **Quality**      | CodeLlama 13B | "What could go wrong?"               |
 
 **Debate Process**
+
 1. **Proposal Phase**: Each agent proposes a solution
 2. **Critique Phase**: Agents critique each other's proposals
 3. **Revision Phase**: Agents revise based on feedback
@@ -89,6 +94,7 @@ Three distinct AI personas collaborate on solutions:
 ### Key Features
 
 **Real-Time Streaming**
+
 - Every agent action streams to the UI instantly
 - Scout searching GitHub
 - Each LLM "thinking" process
@@ -96,11 +102,13 @@ Three distinct AI personas collaborate on solutions:
 - Votes as they're cast
 
 **Human-in-the-Loop**
+
 - Review panel for approving/rejecting/editing fixes
 - Edit code before PR submission
 - Maintain quality control over AI-generated solutions
 
 **Multi-LLM Orchestration**
+
 - Different models assigned to different tasks based on strengths
 - Mistral 7B for issue analysis
 - Mixtral 8x7B for creative solutions
@@ -109,18 +117,21 @@ Three distinct AI personas collaborate on solutions:
 ### Technical Implementation
 
 **Frontend**
+
 - React 18 with Vite for fast development
 - WebSocket hook for real-time event streaming
 - Component-level updates without full page reruns
 - Custom dark theme with JetBrains Mono + Space Grotesk fonts
 
 **Backend**
+
 - FastAPI with async/await support
 - WebSocket endpoint for streaming events
 - Async generators for efficient event streaming
 - Ollama API wrapper for LLM interactions
 
 **Infrastructure**
+
 - Local Ollama for development
 - Google Colab + Cloudflare Tunnel for larger models
 - Configuration system to switch between local/remote inference
@@ -128,16 +139,19 @@ Three distinct AI personas collaborate on solutions:
 ### Challenges Solved
 
 **Streamlit UI Blocking**
+
 - v2 blocked UI during LLM inference (10-30 seconds)
 - v3 uses WebSocket streaming for instant updates
 - React components update independently
 
 **Real-Time Event Streaming**
+
 - Implemented async generators in FastAPI
 - WebSocket protocol for bidirectional communication
 - Event-driven architecture for decoupled components
 
 **Multi-Agent Coordination**
+
 - Structured debate format (propose → critique → revise → vote)
 - Shared context between agents
 - Winner selection algorithm
@@ -163,10 +177,10 @@ Three distinct AI personas collaborate on solutions:
 ### Impact
 
 This project demonstrates:
+
 - **Multi-agent collaboration** in practice
 - **Real-time streaming** architecture for LLM applications
 - **Human-in-the-loop** design for production AI systems
 - **Iterative development** from proof-of-concept to production-ready
 
 The system showcases how multiple AI agents can work together to solve complex problems, with proper oversight and quality control mechanisms.
-
