@@ -122,48 +122,7 @@
     }
   ],
   "awards": [],
-  "certificates": [
-    {
-      "name": "Amazon Web Services",
-      "date": "2024-01-01",
-      "issuer": "AWS",
-      "url": "",
-      "icon": "fa-solid fa-cloud",
-      "level": "Intermediate"
-    },
-    {
-      "name": "Andela Web Specialist",
-      "date": "2023-01-01",
-      "issuer": "Andela",
-      "url": "",
-      "icon": "fa-solid fa-code",
-      "level": "Web Development"
-    },
-    {
-      "name": "Google Web Specialist",
-      "date": "2023-01-01",
-      "issuer": "Google",
-      "url": "",
-      "icon": "fa-solid fa-globe",
-      "level": "Web Development"
-    },
-    {
-      "name": "Harvard CS50 Certificate",
-      "date": "2022-01-01",
-      "issuer": "Harvard University",
-      "url": "",
-      "icon": "fa-solid fa-graduation-cap",
-      "level": "Computer Science"
-    },
-    {
-      "name": "Kaggle Machine Learning Project",
-      "date": "2023-01-01",
-      "issuer": "Kaggle",
-      "url": "",
-      "icon": "fa-solid fa-chart-line",
-      "level": "Machine Learning"
-    }
-  ],
+  "certificates": [],
   "publications": [],
   "skills": [
     {
