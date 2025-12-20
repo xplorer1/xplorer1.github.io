@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://xplorer1.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://xplorer1.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2025-12-20T23:22:40+00:00</updated><id>https://xplorer1.github.io/feed.xml</id><title type="html">Chijioke Ugwuanyi</title><subtitle>Machine Learning Engineer and Researcher at Carnegie Mellon University, specializing in adversarial robustness, computer vision, and MLOps. Applying to Cohere Labs Scholar Program. </subtitle><entry><title type="html">API Live Sync Part 2: Live Source Data Structures and Types</title><link href="https://xplorer1.github.io/blog/2024/api-live-sync-2-data-structures/" rel="alternate" type="text/html" title="API Live Sync Part 2: Live Source Data Structures and Types"/><published>2024-12-19T00:00:00+00:00</published><updated>2024-12-19T00:00:00+00:00</updated><id>https://xplorer1.github.io/blog/2024/api-live-sync-2-data-structures</id><content type="html" xml:base="https://xplorer1.github.io/blog/2024/api-live-sync-2-data-structures/"><![CDATA[<h2 id="api-live-sync-part-2-live-source-data-structures-and-types">API Live Sync Part 2: Live Source Data Structures and Types</h2> <p>In this second part of the series, I dive deep into the core data structures and types that form the foundation of the API Live Sync system.</p> <h3 id="core-data-models">Core Data Models</h3> <p>The API Live Sync system relies on several key data structures to efficiently manage and synchronize API specifications:</p> <h4 id="1-live-source-configuration">1. Live Source Configuration</h4> <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">interface</span> <span class="nx">LiveSourceConfig</span> <span class="p">{</span>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://xplorer1.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://xplorer1.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2025-12-20T23:27:50+00:00</updated><id>https://xplorer1.github.io/feed.xml</id><title type="html">Chijioke Ugwuanyi</title><subtitle>Machine Learning Engineer and Researcher at Carnegie Mellon University, specializing in adversarial robustness, computer vision, and MLOps. Applying to Cohere Labs Scholar Program. </subtitle><entry><title type="html">API Live Sync Part 2: Live Source Data Structures and Types</title><link href="https://xplorer1.github.io/blog/2024/api-live-sync-2-data-structures/" rel="alternate" type="text/html" title="API Live Sync Part 2: Live Source Data Structures and Types"/><published>2024-12-19T00:00:00+00:00</published><updated>2024-12-19T00:00:00+00:00</updated><id>https://xplorer1.github.io/blog/2024/api-live-sync-2-data-structures</id><content type="html" xml:base="https://xplorer1.github.io/blog/2024/api-live-sync-2-data-structures/"><![CDATA[<h2 id="api-live-sync-part-2-live-source-data-structures-and-types">API Live Sync Part 2: Live Source Data Structures and Types</h2> <p>In this second part of the series, I dive deep into the core data structures and types that form the foundation of the API Live Sync system.</p> <h3 id="core-data-models">Core Data Models</h3> <p>The API Live Sync system relies on several key data structures to efficiently manage and synchronize API specifications:</p> <h4 id="1-live-source-configuration">1. Live Source Configuration</h4> <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">interface</span> <span class="nx">LiveSourceConfig</span> <span class="p">{</span>
   <span class="nl">id</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
   <span class="nl">name</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
-  <span class="nl">type</span><span class="p">:</span> <span class="dl">'</span><span class="s1">openapi</span><span class="dl">'</span> <span class="o">|</span> <span class="dl">'</span><span class="s1">graphql</span><span class="dl">'</span> <span class="o">|</span> <span class="dl">'</span><span class="s1">postman</span><span class="dl">'</span><span class="p">;</span>
+  <span class="nl">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">openapi</span><span class="dl">"</span> <span class="o">|</span> <span class="dl">"</span><span class="s2">graphql</span><span class="dl">"</span> <span class="o">|</span> <span class="dl">"</span><span class="s2">postman</span><span class="dl">"</span><span class="p">;</span>
   <span class="nl">url</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span>
   <span class="nl">filePath</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span>
   <span class="nl">refreshInterval</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
@@ -18,7 +18,7 @@
 </code></pre></div></div> <h4 id="3-sync-status-tracking">3. Sync Status Tracking</h4> <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">interface</span> <span class="nx">SyncStatus</span> <span class="p">{</span>
   <span class="nl">sourceId</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
   <span class="nl">lastSync</span><span class="p">:</span> <span class="nb">Date</span><span class="p">;</span>
-  <span class="nl">status</span><span class="p">:</span> <span class="dl">'</span><span class="s1">success</span><span class="dl">'</span> <span class="o">|</span> <span class="dl">'</span><span class="s1">failed</span><span class="dl">'</span> <span class="o">|</span> <span class="dl">'</span><span class="s1">pending</span><span class="dl">'</span><span class="p">;</span>
+  <span class="nl">status</span><span class="p">:</span> <span class="dl">"</span><span class="s2">success</span><span class="dl">"</span> <span class="o">|</span> <span class="dl">"</span><span class="s2">failed</span><span class="dl">"</span> <span class="o">|</span> <span class="dl">"</span><span class="s2">pending</span><span class="dl">"</span><span class="p">;</span>
   <span class="nl">errorMessage</span><span class="p">?:</span> <span class="kr">string</span><span class="p">;</span>
   <span class="nl">changesDetected</span><span class="p">:</span> <span class="nx">boolean</span><span class="p">;</span>
 <span class="p">}</span>
@@ -27,25 +27,25 @@
   <span class="nf">addSource</span><span class="p">(</span><span class="nx">config</span><span class="p">:</span> <span class="nx">LiveSourceConfig</span><span class="p">):</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span><span class="p">;</span>
   <span class="nf">removeSource</span><span class="p">(</span><span class="nx">sourceId</span><span class="p">:</span> <span class="kr">string</span><span class="p">):</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span><span class="p">;</span>
   <span class="nf">updateSource</span><span class="p">(</span><span class="nx">config</span><span class="p">:</span> <span class="nx">LiveSourceConfig</span><span class="p">):</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span><span class="p">;</span>
-  
+
   <span class="c1">// Synchronization</span>
   <span class="nf">syncSource</span><span class="p">(</span><span class="nx">sourceId</span><span class="p">:</span> <span class="kr">string</span><span class="p">):</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">SyncResult</span><span class="o">&gt;</span><span class="p">;</span>
   <span class="nf">syncAllSources</span><span class="p">():</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">SyncResult</span><span class="p">[]</span><span class="o">&gt;</span><span class="p">;</span>
-  
+
   <span class="c1">// Status and monitoring</span>
   <span class="nf">getSourceStatus</span><span class="p">(</span><span class="nx">sourceId</span><span class="p">:</span> <span class="kr">string</span><span class="p">):</span> <span class="nx">SyncStatus</span><span class="p">;</span>
   <span class="nf">getAllSourceStatuses</span><span class="p">():</span> <span class="nx">SyncStatus</span><span class="p">[];</span>
 <span class="p">}</span>
 </code></pre></div></div> <h4 id="service-implementation">Service Implementation</h4> <p>The service layer handles several critical responsibilities:</p> <ol> <li><strong>Source Management</strong>: Adding, removing, and updating live source configurations</li> <li><strong>Synchronization Logic</strong>: Coordinating the sync process across multiple sources</li> <li><strong>Error Handling</strong>: Managing failures and retry mechanisms</li> <li><strong>State Management</strong>: Maintaining consistent state across the application</li> <li><strong>Event Broadcasting</strong>: Notifying other parts of the system about sync events</li> </ol> <h3 id="event-driven-architecture">Event-Driven Architecture</h3> <p>The service uses an event-driven approach to communicate with other parts of the system:</p> <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">enum</span> <span class="nx">SyncEvents</span> <span class="p">{</span>
-  <span class="nx">SOURCE_ADDED</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">source:added</span><span class="dl">'</span><span class="p">,</span>
-  <span class="nx">SOURCE_REMOVED</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">source:removed</span><span class="dl">'</span><span class="p">,</span>
-  <span class="nx">SYNC_STARTED</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">sync:started</span><span class="dl">'</span><span class="p">,</span>
-  <span class="nx">SYNC_COMPLETED</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">sync:completed</span><span class="dl">'</span><span class="p">,</span>
-  <span class="nx">SYNC_FAILED</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">sync:failed</span><span class="dl">'</span>
+  <span class="nx">SOURCE_ADDED</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">source:added</span><span class="dl">"</span><span class="p">,</span>
+  <span class="nx">SOURCE_REMOVED</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">source:removed</span><span class="dl">"</span><span class="p">,</span>
+  <span class="nx">SYNC_STARTED</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">sync:started</span><span class="dl">"</span><span class="p">,</span>
+  <span class="nx">SYNC_COMPLETED</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">sync:completed</span><span class="dl">"</span><span class="p">,</span>
+  <span class="nx">SYNC_FAILED</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">sync:failed</span><span class="dl">"</span><span class="p">,</span>
 <span class="p">}</span>
 </code></pre></div></div> <p><a href="https://creative-labs.hashnode.dev/api-live-sync-3-live-sync-service">Read the full article on Hashnode →</a></p>]]></content><author><name>Chijioke Ugwuanyi</name></author><category term="API Development"/><category term="Live Sync"/><category term="Hoppscotch"/><category term="api"/><category term="live-sync"/><category term="service-layer"/><category term="architecture"/><category term="hoppscotch"/><summary type="html"><![CDATA[API Live Sync Part 3: Live Sync Service]]></summary></entry><entry><title type="html">API Live Sync Part 4: OpenAI Fetcher</title><link href="https://xplorer1.github.io/blog/2024/api-live-sync-4-openai-fetcher/" rel="alternate" type="text/html" title="API Live Sync Part 4: OpenAI Fetcher"/><published>2024-12-19T00:00:00+00:00</published><updated>2024-12-19T00:00:00+00:00</updated><id>https://xplorer1.github.io/blog/2024/api-live-sync-4-openai-fetcher</id><content type="html" xml:base="https://xplorer1.github.io/blog/2024/api-live-sync-4-openai-fetcher/"><![CDATA[<h2 id="api-live-sync-part-4-openai-fetcher">API Live Sync Part 4: OpenAI Fetcher</h2> <p>In this fourth part, I explore how we integrated OpenAI’s capabilities to enhance the API Live Sync system with intelligent API detection and processing.</p> <h3 id="ai-powered-api-detection">AI-Powered API Detection</h3> <p>The OpenAI Fetcher component leverages artificial intelligence to automatically detect and parse API specifications from various sources, making the sync process more intelligent and accurate.</p> <h4 id="openai-integration">OpenAI Integration</h4> <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">interface</span> <span class="nx">OpenAIFetcherConfig</span> <span class="p">{</span>
   <span class="nl">apiKey</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
-  <span class="nl">model</span><span class="p">:</span> <span class="dl">'</span><span class="s1">gpt-4</span><span class="dl">'</span> <span class="o">|</span> <span class="dl">'</span><span class="s1">gpt-3.5-turbo</span><span class="dl">'</span><span class="p">;</span>
+  <span class="nl">model</span><span class="p">:</span> <span class="dl">"</span><span class="s2">gpt-4</span><span class="dl">"</span> <span class="o">|</span> <span class="dl">"</span><span class="s2">gpt-3.5-turbo</span><span class="dl">"</span><span class="p">;</span>
   <span class="nl">maxTokens</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
   <span class="nl">temperature</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
   <span class="nl">timeout</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
@@ -53,13 +53,13 @@
 </code></pre></div></div> <h4 id="core-fetcher-interface">Core Fetcher Interface</h4> <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">interface</span> <span class="nx">OpenAIFetcher</span> <span class="p">{</span>
   <span class="c1">// API specification extraction</span>
   <span class="nf">extractAPISpec</span><span class="p">(</span><span class="nx">content</span><span class="p">:</span> <span class="kr">string</span><span class="p">):</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">APISpecification</span><span class="o">&gt;</span><span class="p">;</span>
-  
+
   <span class="c1">// Schema validation and enhancement</span>
   <span class="nf">validateSchema</span><span class="p">(</span><span class="nx">schema</span><span class="p">:</span> <span class="kr">any</span><span class="p">):</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">ValidationResult</span><span class="o">&gt;</span><span class="p">;</span>
-  
+
   <span class="c1">// Intelligent field mapping</span>
   <span class="nf">mapFields</span><span class="p">(</span><span class="nx">sourceSchema</span><span class="p">:</span> <span class="kr">any</span><span class="p">,</span> <span class="nx">targetSchema</span><span class="p">:</span> <span class="kr">any</span><span class="p">):</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">FieldMapping</span><span class="o">&gt;</span><span class="p">;</span>
-  
+
   <span class="c1">// Error correction and suggestions</span>
   <span class="nf">suggestImprovements</span><span class="p">(</span><span class="nx">spec</span><span class="p">:</span> <span class="nx">APISpecification</span><span class="p">):</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">ImprovementSuggestion</span><span class="p">[]</span><span class="o">&gt;</span><span class="p">;</span>
 <span class="p">}</span>
@@ -72,11 +72,11 @@ Focus on accuracy and completeness.
   <span class="c1">// Watch management</span>
   <span class="nf">watchDirectory</span><span class="p">(</span><span class="nx">path</span><span class="p">:</span> <span class="kr">string</span><span class="p">,</span> <span class="nx">options</span><span class="p">:</span> <span class="nx">WatchOptions</span><span class="p">):</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span><span class="p">;</span>
   <span class="nf">unwatchDirectory</span><span class="p">(</span><span class="nx">path</span><span class="p">:</span> <span class="kr">string</span><span class="p">):</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span><span class="p">;</span>
-  
+
   <span class="c1">// Event handling</span>
   <span class="nf">onFileChange</span><span class="p">(</span><span class="nx">callback</span><span class="p">:</span> <span class="p">(</span><span class="nx">event</span><span class="p">:</span> <span class="nx">FileChangeEvent</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="k">void</span><span class="p">):</span> <span class="k">void</span><span class="p">;</span>
   <span class="nf">onFileDelete</span><span class="p">(</span><span class="nx">callback</span><span class="p">:</span> <span class="p">(</span><span class="nx">event</span><span class="p">:</span> <span class="nx">FileDeleteEvent</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="k">void</span><span class="p">):</span> <span class="k">void</span><span class="p">;</span>
-  
+
   <span class="c1">// Status and control</span>
   <span class="nf">isWatching</span><span class="p">(</span><span class="nx">path</span><span class="p">:</span> <span class="kr">string</span><span class="p">):</span> <span class="nx">boolean</span><span class="p">;</span>
   <span class="nf">getWatchedPaths</span><span class="p">():</span> <span class="kr">string</span><span class="p">[];</span>
@@ -92,17 +92,17 @@ Focus on accuracy and completeness.
 </code></pre></div></div> <h3 id="implementation-details">Implementation Details</h3> <p>The file watcher uses Node.js’s <code class="language-plaintext highlighter-rouge">fs.watch</code> API with several optimizations:</p> <ol> <li><strong>Debouncing</strong>: Prevents excessive events from rapid file changes</li> <li><strong>Pattern Filtering</strong>: Only watches relevant file types (<code class="language-plaintext highlighter-rouge">.yaml</code>, <code class="language-plaintext highlighter-rouge">.json</code>, <code class="language-plaintext highlighter-rouge">.md</code>)</li> <li><strong>Recursive Watching</strong>: Monitors subdirectories for nested API specs</li> <li><strong>Event Aggregation</strong>: Groups related file changes to reduce processing overhead</li> </ol> <h3 id="performance-considerations">Performance Considerations</h3> <p>File watching can be resource-intensive, so we’ve implemented several optimizations:</p> <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">OptimizedFileWatcher</span> <span class="p">{</span>
   <span class="k">private</span> <span class="nx">debounceTimers</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Map</span><span class="o">&lt;</span><span class="kr">string</span><span class="p">,</span> <span class="nx">NodeJS</span><span class="p">.</span><span class="nx">Timeout</span><span class="o">&gt;</span><span class="p">();</span>
   <span class="k">private</span> <span class="nx">eventQueue</span><span class="p">:</span> <span class="nx">FileChangeEvent</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[];</span>
-  
+
   <span class="k">private</span> <span class="nf">debounceEvent</span><span class="p">(</span><span class="nx">path</span><span class="p">:</span> <span class="kr">string</span><span class="p">,</span> <span class="nx">callback</span><span class="p">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="k">void</span><span class="p">,</span> <span class="nx">delay</span><span class="p">:</span> <span class="kr">number</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">debounceTimers</span><span class="p">.</span><span class="nf">has</span><span class="p">(</span><span class="nx">path</span><span class="p">))</span> <span class="p">{</span>
       <span class="nf">clearTimeout</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">debounceTimers</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="nx">path</span><span class="p">)</span><span class="o">!</span><span class="p">);</span>
     <span class="p">}</span>
-    
+
     <span class="kd">const</span> <span class="nx">timer</span> <span class="o">=</span> <span class="nf">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
       <span class="nf">callback</span><span class="p">();</span>
       <span class="k">this</span><span class="p">.</span><span class="nx">debounceTimers</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="nx">path</span><span class="p">);</span>
     <span class="p">},</span> <span class="nx">delay</span><span class="p">);</span>
-    
+
     <span class="k">this</span><span class="p">.</span><span class="nx">debounceTimers</span><span class="p">.</span><span class="nf">set</span><span class="p">(</span><span class="nx">path</span><span class="p">,</span> <span class="nx">timer</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">}</span>
@@ -112,12 +112,12 @@ Focus on accuracy and completeness.
   <span class="nf">stopSync</span><span class="p">():</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span><span class="p">;</span>
   <span class="nf">pauseSync</span><span class="p">():</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span><span class="p">;</span>
   <span class="nf">resumeSync</span><span class="p">():</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span><span class="p">;</span>
-  
+
   <span class="c1">// Sync management</span>
   <span class="nf">addSyncJob</span><span class="p">(</span><span class="nx">job</span><span class="p">:</span> <span class="nx">SyncJob</span><span class="p">):</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span><span class="p">;</span>
   <span class="nf">removeSyncJob</span><span class="p">(</span><span class="nx">jobId</span><span class="p">:</span> <span class="kr">string</span><span class="p">):</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span><span class="p">;</span>
   <span class="nf">getSyncStatus</span><span class="p">():</span> <span class="nx">SyncEngineStatus</span><span class="p">;</span>
-  
+
   <span class="c1">// Configuration</span>
   <span class="nf">updateConfig</span><span class="p">(</span><span class="nx">config</span><span class="p">:</span> <span class="nx">SyncEngineConfig</span><span class="p">):</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span><span class="p">;</span>
   <span class="nf">getConfig</span><span class="p">():</span> <span class="nx">SyncEngineConfig</span><span class="p">;</span>
@@ -125,35 +125,28 @@ Focus on accuracy and completeness.
 </code></pre></div></div> <h4 id="sync-job-definition">Sync Job Definition</h4> <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">interface</span> <span class="nx">SyncJob</span> <span class="p">{</span>
   <span class="nl">id</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
   <span class="nl">sourceId</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
-  <span class="nl">priority</span><span class="p">:</span> <span class="dl">'</span><span class="s1">high</span><span class="dl">'</span> <span class="o">|</span> <span class="dl">'</span><span class="s1">medium</span><span class="dl">'</span> <span class="o">|</span> <span class="dl">'</span><span class="s1">low</span><span class="dl">'</span><span class="p">;</span>
+  <span class="nl">priority</span><span class="p">:</span> <span class="dl">"</span><span class="s2">high</span><span class="dl">"</span> <span class="o">|</span> <span class="dl">"</span><span class="s2">medium</span><span class="dl">"</span> <span class="o">|</span> <span class="dl">"</span><span class="s2">low</span><span class="dl">"</span><span class="p">;</span>
   <span class="nl">retryCount</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
   <span class="nl">maxRetries</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
   <span class="nl">lastAttempt</span><span class="p">:</span> <span class="nb">Date</span><span class="p">;</span>
   <span class="nl">nextAttempt</span><span class="p">:</span> <span class="nb">Date</span><span class="p">;</span>
-  <span class="nl">status</span><span class="p">:</span> <span class="dl">'</span><span class="s1">pending</span><span class="dl">'</span> <span class="o">|</span> <span class="dl">'</span><span class="s1">running</span><span class="dl">'</span> <span class="o">|</span> <span class="dl">'</span><span class="s1">completed</span><span class="dl">'</span> <span class="o">|</span> <span class="dl">'</span><span class="s1">failed</span><span class="dl">'</span><span class="p">;</span>
+  <span class="nl">status</span><span class="p">:</span> <span class="dl">"</span><span class="s2">pending</span><span class="dl">"</span> <span class="o">|</span> <span class="dl">"</span><span class="s2">running</span><span class="dl">"</span> <span class="o">|</span> <span class="dl">"</span><span class="s2">completed</span><span class="dl">"</span> <span class="o">|</span> <span class="dl">"</span><span class="s2">failed</span><span class="dl">"</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></div> <h3 id="conflict-resolution">Conflict Resolution</h3> <p>One of the most challenging aspects of synchronization is handling conflicts when multiple sources have different versions of the same API specification:</p> <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">ConflictResolver</span> <span class="p">{</span>
-  <span class="k">async</span> <span class="nf">resolveConflict</span><span class="p">(</span>
-    <span class="nx">localSpec</span><span class="p">:</span> <span class="nx">APISpecification</span><span class="p">,</span>
-    <span class="nx">remoteSpec</span><span class="p">:</span> <span class="nx">APISpecification</span>
-  <span class="p">):</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">ResolvedSpec</span><span class="o">&gt;</span> <span class="p">{</span>
+  <span class="k">async</span> <span class="nf">resolveConflict</span><span class="p">(</span><span class="nx">localSpec</span><span class="p">:</span> <span class="nx">APISpecification</span><span class="p">,</span> <span class="nx">remoteSpec</span><span class="p">:</span> <span class="nx">APISpecification</span><span class="p">):</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">ResolvedSpec</span><span class="o">&gt;</span> <span class="p">{</span>
     <span class="c1">// Analyze differences</span>
     <span class="kd">const</span> <span class="nx">differences</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nf">analyzeDifferences</span><span class="p">(</span><span class="nx">localSpec</span><span class="p">,</span> <span class="nx">remoteSpec</span><span class="p">);</span>
-    
+
     <span class="c1">// Apply conflict resolution strategies</span>
     <span class="k">if </span><span class="p">(</span><span class="nx">differences</span><span class="p">.</span><span class="nx">conflicts</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
       <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nf">mergeSpecs</span><span class="p">(</span><span class="nx">localSpec</span><span class="p">,</span> <span class="nx">remoteSpec</span><span class="p">);</span>
     <span class="p">}</span>
-    
+
     <span class="c1">// Use AI-powered conflict resolution</span>
     <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nf">resolveWithAI</span><span class="p">(</span><span class="nx">localSpec</span><span class="p">,</span> <span class="nx">remoteSpec</span><span class="p">,</span> <span class="nx">differences</span><span class="p">);</span>
   <span class="p">}</span>
-  
-  <span class="k">private</span> <span class="k">async</span> <span class="nf">resolveWithAI</span><span class="p">(</span>
-    <span class="nx">local</span><span class="p">:</span> <span class="nx">APISpecification</span><span class="p">,</span>
-    <span class="nx">remote</span><span class="p">:</span> <span class="nx">APISpecification</span><span class="p">,</span>
-    <span class="nx">differences</span><span class="p">:</span> <span class="nx">DifferenceAnalysis</span>
-  <span class="p">):</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">ResolvedSpec</span><span class="o">&gt;</span> <span class="p">{</span>
+
+  <span class="k">private</span> <span class="k">async</span> <span class="nf">resolveWithAI</span><span class="p">(</span><span class="nx">local</span><span class="p">:</span> <span class="nx">APISpecification</span><span class="p">,</span> <span class="nx">remote</span><span class="p">:</span> <span class="nx">APISpecification</span><span class="p">,</span> <span class="nx">differences</span><span class="p">:</span> <span class="nx">DifferenceAnalysis</span><span class="p">):</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">ResolvedSpec</span><span class="o">&gt;</span> <span class="p">{</span>
     <span class="c1">// Leverage OpenAI to intelligently resolve conflicts</span>
     <span class="kd">const</span> <span class="nx">prompt</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nf">buildConflictResolutionPrompt</span><span class="p">(</span><span class="nx">local</span><span class="p">,</span> <span class="nx">remote</span><span class="p">,</span> <span class="nx">differences</span><span class="p">);</span>
     <span class="kd">const</span> <span class="nx">resolution</span> <span class="o">=</span> <span class="k">await</span> <span class="k">this</span><span class="p">.</span><span class="nx">openAI</span><span class="p">.</span><span class="nf">resolveConflict</span><span class="p">(</span><span class="nx">prompt</span><span class="p">);</span>

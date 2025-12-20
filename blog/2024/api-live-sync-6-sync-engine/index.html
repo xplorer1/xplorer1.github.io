@@ -6,12 +6,12 @@
   <span class="nf">stopSync</span><span class="p">():</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span><span class="p">;</span>
   <span class="nf">pauseSync</span><span class="p">():</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span><span class="p">;</span>
   <span class="nf">resumeSync</span><span class="p">():</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span><span class="p">;</span>
-  
+
   <span class="c1">// Sync management</span>
   <span class="nf">addSyncJob</span><span class="p">(</span><span class="nx">job</span><span class="p">:</span> <span class="nx">SyncJob</span><span class="p">):</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span><span class="p">;</span>
   <span class="nf">removeSyncJob</span><span class="p">(</span><span class="nx">jobId</span><span class="p">:</span> <span class="kr">string</span><span class="p">):</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span><span class="p">;</span>
   <span class="nf">getSyncStatus</span><span class="p">():</span> <span class="nx">SyncEngineStatus</span><span class="p">;</span>
-  
+
   <span class="c1">// Configuration</span>
   <span class="nf">updateConfig</span><span class="p">(</span><span class="nx">config</span><span class="p">:</span> <span class="nx">SyncEngineConfig</span><span class="p">):</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span><span class="p">;</span>
   <span class="nf">getConfig</span><span class="p">():</span> <span class="nx">SyncEngineConfig</span><span class="p">;</span>
@@ -19,35 +19,28 @@
 </code></pre></div></div> <h4 id="sync-job-definition">Sync Job Definition</h4> <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">interface</span> <span class="nx">SyncJob</span> <span class="p">{</span>
   <span class="nl">id</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
   <span class="nl">sourceId</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
-  <span class="nl">priority</span><span class="p">:</span> <span class="dl">'</span><span class="s1">high</span><span class="dl">'</span> <span class="o">|</span> <span class="dl">'</span><span class="s1">medium</span><span class="dl">'</span> <span class="o">|</span> <span class="dl">'</span><span class="s1">low</span><span class="dl">'</span><span class="p">;</span>
+  <span class="nl">priority</span><span class="p">:</span> <span class="dl">"</span><span class="s2">high</span><span class="dl">"</span> <span class="o">|</span> <span class="dl">"</span><span class="s2">medium</span><span class="dl">"</span> <span class="o">|</span> <span class="dl">"</span><span class="s2">low</span><span class="dl">"</span><span class="p">;</span>
   <span class="nl">retryCount</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
   <span class="nl">maxRetries</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
   <span class="nl">lastAttempt</span><span class="p">:</span> <span class="nb">Date</span><span class="p">;</span>
   <span class="nl">nextAttempt</span><span class="p">:</span> <span class="nb">Date</span><span class="p">;</span>
-  <span class="nl">status</span><span class="p">:</span> <span class="dl">'</span><span class="s1">pending</span><span class="dl">'</span> <span class="o">|</span> <span class="dl">'</span><span class="s1">running</span><span class="dl">'</span> <span class="o">|</span> <span class="dl">'</span><span class="s1">completed</span><span class="dl">'</span> <span class="o">|</span> <span class="dl">'</span><span class="s1">failed</span><span class="dl">'</span><span class="p">;</span>
+  <span class="nl">status</span><span class="p">:</span> <span class="dl">"</span><span class="s2">pending</span><span class="dl">"</span> <span class="o">|</span> <span class="dl">"</span><span class="s2">running</span><span class="dl">"</span> <span class="o">|</span> <span class="dl">"</span><span class="s2">completed</span><span class="dl">"</span> <span class="o">|</span> <span class="dl">"</span><span class="s2">failed</span><span class="dl">"</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></div> <h3 id="conflict-resolution">Conflict Resolution</h3> <p>One of the most challenging aspects of synchronization is handling conflicts when multiple sources have different versions of the same API specification:</p> <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">ConflictResolver</span> <span class="p">{</span>
-  <span class="k">async</span> <span class="nf">resolveConflict</span><span class="p">(</span>
-    <span class="nx">localSpec</span><span class="p">:</span> <span class="nx">APISpecification</span><span class="p">,</span>
-    <span class="nx">remoteSpec</span><span class="p">:</span> <span class="nx">APISpecification</span>
-  <span class="p">):</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">ResolvedSpec</span><span class="o">&gt;</span> <span class="p">{</span>
+  <span class="k">async</span> <span class="nf">resolveConflict</span><span class="p">(</span><span class="nx">localSpec</span><span class="p">:</span> <span class="nx">APISpecification</span><span class="p">,</span> <span class="nx">remoteSpec</span><span class="p">:</span> <span class="nx">APISpecification</span><span class="p">):</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">ResolvedSpec</span><span class="o">&gt;</span> <span class="p">{</span>
     <span class="c1">// Analyze differences</span>
     <span class="kd">const</span> <span class="nx">differences</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nf">analyzeDifferences</span><span class="p">(</span><span class="nx">localSpec</span><span class="p">,</span> <span class="nx">remoteSpec</span><span class="p">);</span>
-    
+
     <span class="c1">// Apply conflict resolution strategies</span>
     <span class="k">if </span><span class="p">(</span><span class="nx">differences</span><span class="p">.</span><span class="nx">conflicts</span><span class="p">.</span><span class="nx">length</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
       <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nf">mergeSpecs</span><span class="p">(</span><span class="nx">localSpec</span><span class="p">,</span> <span class="nx">remoteSpec</span><span class="p">);</span>
     <span class="p">}</span>
-    
+
     <span class="c1">// Use AI-powered conflict resolution</span>
     <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nf">resolveWithAI</span><span class="p">(</span><span class="nx">localSpec</span><span class="p">,</span> <span class="nx">remoteSpec</span><span class="p">,</span> <span class="nx">differences</span><span class="p">);</span>
   <span class="p">}</span>
-  
-  <span class="k">private</span> <span class="k">async</span> <span class="nf">resolveWithAI</span><span class="p">(</span>
-    <span class="nx">local</span><span class="p">:</span> <span class="nx">APISpecification</span><span class="p">,</span>
-    <span class="nx">remote</span><span class="p">:</span> <span class="nx">APISpecification</span><span class="p">,</span>
-    <span class="nx">differences</span><span class="p">:</span> <span class="nx">DifferenceAnalysis</span>
-  <span class="p">):</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">ResolvedSpec</span><span class="o">&gt;</span> <span class="p">{</span>
+
+  <span class="k">private</span> <span class="k">async</span> <span class="nf">resolveWithAI</span><span class="p">(</span><span class="nx">local</span><span class="p">:</span> <span class="nx">APISpecification</span><span class="p">,</span> <span class="nx">remote</span><span class="p">:</span> <span class="nx">APISpecification</span><span class="p">,</span> <span class="nx">differences</span><span class="p">:</span> <span class="nx">DifferenceAnalysis</span><span class="p">):</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">ResolvedSpec</span><span class="o">&gt;</span> <span class="p">{</span>
     <span class="c1">// Leverage OpenAI to intelligently resolve conflicts</span>
     <span class="kd">const</span> <span class="nx">prompt</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nf">buildConflictResolutionPrompt</span><span class="p">(</span><span class="nx">local</span><span class="p">,</span> <span class="nx">remote</span><span class="p">,</span> <span class="nx">differences</span><span class="p">);</span>
     <span class="kd">const</span> <span class="nx">resolution</span> <span class="o">=</span> <span class="k">await</span> <span class="k">this</span><span class="p">.</span><span class="nx">openAI</span><span class="p">.</span><span class="nf">resolveConflict</span><span class="p">(</span><span class="nx">prompt</span><span class="p">);</span>

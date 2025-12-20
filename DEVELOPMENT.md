@@ -30,12 +30,14 @@ docker-compose -f docker-compose.prod.yml up --build
 ## What's Different from React Development
 
 ### Jekyll vs React
+
 - **Jekyll**: Static site generator that builds HTML files
 - **React**: JavaScript framework with hot module replacement
 - **Build Process**: Jekyll needs to rebuild the entire site when files change
 - **Reload Speed**: Slightly slower than React but still very fast
 
 ### Live Reload Features
+
 - ✅ **File Watching**: Automatically detects changes to markdown, HTML, CSS, and JavaScript files
 - ✅ **Browser Refresh**: Automatically refreshes your browser when files change
 - ✅ **Fast Rebuilds**: Optimized for quick rebuilds during development
@@ -45,12 +47,15 @@ docker-compose -f docker-compose.prod.yml up --build
 ## Development Workflow
 
 ### 1. Start Development Server
+
 ```bash
 docker-compose up --build
 ```
 
 ### 2. Make Changes
+
 Edit any of these file types:
+
 - `_pages/*.md` - Page content
 - `_projects/*.md` - Project descriptions
 - `_sass/*.scss` - Styles
@@ -59,13 +64,16 @@ Edit any of these file types:
 - `_includes/*.html` - Reusable components
 
 ### 3. See Changes Automatically
+
 - Browser will automatically refresh
 - Changes appear within 1-3 seconds
 - No manual refresh needed
 - Live reload indicator shows in browser
 
 ### 4. Stop Development Server
+
 Press `Ctrl+C` in the terminal or run:
+
 ```bash
 docker-compose down
 ```
@@ -86,17 +94,20 @@ docker-compose down
 ## Common Development Tasks
 
 ### Adding a New Page
+
 1. Create `_pages/newpage.md`
 2. Add front matter (YAML header)
 3. Write content in Markdown
 4. Save and see changes immediately
 
 ### Modifying Styles
+
 1. Edit `_sass/` files
 2. Changes compile automatically
 3. Browser refreshes with new styles
 
 ### Adding Projects
+
 1. Edit existing files in `_projects/`
 2. Or create new project files
 3. Update `_config.yml` if needed
@@ -106,16 +117,19 @@ docker-compose down
 The `docker-compose.yml` file includes several optimizations for development:
 
 ### File Watching
+
 - **Force Polling**: Enabled for better Windows compatibility
 - **Live Reload**: Automatic browser refresh on file changes
 - **Incremental Builds**: Faster rebuilds by only processing changed files
 
 ### Performance
+
 - **Temporary Files**: Uses tmpfs for faster file operations
 - **Volume Mounts**: Direct file access for immediate changes
 - **Restart Policy**: Automatic restart on failure
 
 ### Environment Variables
+
 - `JEKYLL_ENV=development`: Enables development features
 - `JEKYLL_LIVERELOAD=true`: Enables live reload
 - `JEKYLL_FORCE_POLLING=true`: Better file watching on Windows
@@ -123,7 +137,9 @@ The `docker-compose.yml` file includes several optimizations for development:
 ## Troubleshooting
 
 ### Port Already in Use
+
 If port 4000 is busy:
+
 ```bash
 # Stop all containers
 docker-compose down
@@ -136,12 +152,14 @@ docker-compose up --build
 ```
 
 ### Changes Not Appearing
+
 1. Check if the development server is running
 2. Verify file paths are correct
 3. Check browser console for errors
 4. Restart the development server
 
 ### Docker Issues
+
 ```bash
 # Rebuild from scratch
 docker-compose down
@@ -150,6 +168,7 @@ docker-compose up --build
 ```
 
 ### File Watching Issues on Windows
+
 The configuration includes `--force_polling` which should resolve most Windows file watching issues. If you still have problems:
 
 1. Ensure Docker Desktop has file sharing enabled for your project directory
@@ -159,12 +178,14 @@ The configuration includes `--force_polling` which should resolve most Windows f
 ## Performance Tips
 
 ### Fast Development
+
 - Keep the development server running
 - Use `docker-compose up --build` for the first run
 - Use `docker-compose up` for subsequent runs (faster)
 - Monitor logs for any build errors
 
 ### File Watching
+
 - Jekyll watches all relevant files automatically
 - Large binary files (images, videos) don't trigger rebuilds
 - Focus on text-based files for development
@@ -175,11 +196,13 @@ The configuration includes `--force_polling` which should resolve most Windows f
 When ready to deploy:
 
 ### Option 1: Docker Compose Production
+
 ```bash
 docker-compose -f docker-compose.prod.yml up --build
 ```
 
 ### Option 2: Direct Jekyll Build
+
 ```bash
 # Build the site
 jekyll build
@@ -189,11 +212,13 @@ jekyll serve --host 0.0.0.0 --port 4000
 ```
 
 ### Option 3: GitHub Pages
+
 Push your changes to the main branch and GitHub Pages will automatically build and deploy your site.
 
 ## Support
 
 If you encounter issues:
+
 1. Check the logs: `docker-compose logs -f jekyll`
 2. Restart the server: `docker-compose down && docker-compose up --build`
 3. Clean and rebuild: `docker-compose down && docker system prune -f && docker-compose up --build`

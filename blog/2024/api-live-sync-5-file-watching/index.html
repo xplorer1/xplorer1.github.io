@@ -4,11 +4,11 @@
   <span class="c1">// Watch management</span>
   <span class="nf">watchDirectory</span><span class="p">(</span><span class="nx">path</span><span class="p">:</span> <span class="kr">string</span><span class="p">,</span> <span class="nx">options</span><span class="p">:</span> <span class="nx">WatchOptions</span><span class="p">):</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span><span class="p">;</span>
   <span class="nf">unwatchDirectory</span><span class="p">(</span><span class="nx">path</span><span class="p">:</span> <span class="kr">string</span><span class="p">):</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span><span class="p">;</span>
-  
+
   <span class="c1">// Event handling</span>
   <span class="nf">onFileChange</span><span class="p">(</span><span class="nx">callback</span><span class="p">:</span> <span class="p">(</span><span class="nx">event</span><span class="p">:</span> <span class="nx">FileChangeEvent</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="k">void</span><span class="p">):</span> <span class="k">void</span><span class="p">;</span>
   <span class="nf">onFileDelete</span><span class="p">(</span><span class="nx">callback</span><span class="p">:</span> <span class="p">(</span><span class="nx">event</span><span class="p">:</span> <span class="nx">FileDeleteEvent</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="k">void</span><span class="p">):</span> <span class="k">void</span><span class="p">;</span>
-  
+
   <span class="c1">// Status and control</span>
   <span class="nf">isWatching</span><span class="p">(</span><span class="nx">path</span><span class="p">:</span> <span class="kr">string</span><span class="p">):</span> <span class="nx">boolean</span><span class="p">;</span>
   <span class="nf">getWatchedPaths</span><span class="p">():</span> <span class="kr">string</span><span class="p">[];</span>
@@ -24,17 +24,17 @@
 </code></pre></div></div> <h3 id="implementation-details">Implementation Details</h3> <p>The file watcher uses Node.js’s <code class="language-plaintext highlighter-rouge">fs.watch</code> API with several optimizations:</p> <ol> <li> <strong>Debouncing</strong>: Prevents excessive events from rapid file changes</li> <li> <strong>Pattern Filtering</strong>: Only watches relevant file types (<code class="language-plaintext highlighter-rouge">.yaml</code>, <code class="language-plaintext highlighter-rouge">.json</code>, <code class="language-plaintext highlighter-rouge">.md</code>)</li> <li> <strong>Recursive Watching</strong>: Monitors subdirectories for nested API specs</li> <li> <strong>Event Aggregation</strong>: Groups related file changes to reduce processing overhead</li> </ol> <h3 id="performance-considerations">Performance Considerations</h3> <p>File watching can be resource-intensive, so we’ve implemented several optimizations:</p> <div class="language-typescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">OptimizedFileWatcher</span> <span class="p">{</span>
   <span class="k">private</span> <span class="nx">debounceTimers</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Map</span><span class="o">&lt;</span><span class="kr">string</span><span class="p">,</span> <span class="nx">NodeJS</span><span class="p">.</span><span class="nx">Timeout</span><span class="o">&gt;</span><span class="p">();</span>
   <span class="k">private</span> <span class="nx">eventQueue</span><span class="p">:</span> <span class="nx">FileChangeEvent</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[];</span>
-  
+
   <span class="k">private</span> <span class="nf">debounceEvent</span><span class="p">(</span><span class="nx">path</span><span class="p">:</span> <span class="kr">string</span><span class="p">,</span> <span class="nx">callback</span><span class="p">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="k">void</span><span class="p">,</span> <span class="nx">delay</span><span class="p">:</span> <span class="kr">number</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">debounceTimers</span><span class="p">.</span><span class="nf">has</span><span class="p">(</span><span class="nx">path</span><span class="p">))</span> <span class="p">{</span>
       <span class="nf">clearTimeout</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">debounceTimers</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="nx">path</span><span class="p">)</span><span class="o">!</span><span class="p">);</span>
     <span class="p">}</span>
-    
+
     <span class="kd">const</span> <span class="nx">timer</span> <span class="o">=</span> <span class="nf">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
       <span class="nf">callback</span><span class="p">();</span>
       <span class="k">this</span><span class="p">.</span><span class="nx">debounceTimers</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="nx">path</span><span class="p">);</span>
     <span class="p">},</span> <span class="nx">delay</span><span class="p">);</span>
-    
+
     <span class="k">this</span><span class="p">.</span><span class="nx">debounceTimers</span><span class="p">.</span><span class="nf">set</span><span class="p">(</span><span class="nx">path</span><span class="p">,</span> <span class="nx">timer</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">}</span>
