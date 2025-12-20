@@ -125,20 +125,46 @@ Carnegie Mellon University | M.Sc. Information Technology (2024-2025)
 
 ## Skills
 
-**Programming:** Python, Java, JavaScript  
-**Frameworks and Toolkits:** NumPy, Pandas, Scikit-learn, PyTorch  
-**Cloud and Database:** AWS, PostgreSQL, MongoDB  
-**Specializations:** Machine Learning, Computer Vision, MLOps, Adversarial ML
+**Programming Languages:** Python, TypeScript, JavaScript, Java, Rust, C/C++, SQL, Bash/Shell
+
+**Machine Learning & AI:**
+- Deep Learning: PyTorch, TensorFlow (ResNet50, VGG16, MobileNetV2, EfficientNet, transfer learning)
+- Traditional ML: scikit-learn (Logistic Regression, Random Forest, SVM, KNN, MLP, pipelines, cross-validation), XGBoost
+- Adversarial ML: FGSM attacks, white-box and black-box scenarios, adversarial training
+- LLMs & Agents: Ollama API, multi-agent systems, RAG systems, tool calling, human-in-the-loop workflows
+
+**Backend & Web Development:**
+- Frameworks: Express.js (TypeScript), Spring Boot (Java), FastAPI (Python), Node.js
+- APIs: REST APIs, WebSocket, gRPC, OpenAPI/Swagger
+- Architecture: Microservices, event-driven systems, distributed systems
+
+**Frontend Development:**
+- Frameworks: React, Next.js
+- Technologies: HTML/CSS, responsive UI development, real-time streaming interfaces
+
+**Data Engineering:**
+- Data Processing: Pandas, NumPy, data pipelines, ETL workflows
+- Databases: PostgreSQL (schema design, migrations, optimization), MongoDB, Redis
+- Message Systems: Kafka (queuing, at-least-once delivery), event-driven architecture
+
+**Infrastructure & DevOps:**
+- Cloud: AWS (EC2, S3), cloud-native deployments
+- Containerization: Docker, Docker Compose, Kubernetes
+- CI/CD: GitHub Actions, Jenkins
+- Monitoring: Logs, metrics, distributed tracing, observability tooling
+
+**Development Tools:**
+- Version Control: Git, GitHub
+- IDEs: VS Code
+- Notebooks: Jupyter, Google Colab
+- API Testing: Postman, Swagger/OpenAPI
+- Design: Figma, Draw.io (system diagrams)
+
+**Methodologies & Practices:**
+- Agile/Scrum, Test-driven development, Clean code, Documentation-driven development
+- End-to-end feature ownership, System design, Research-to-production workflows
 
 ---
-
-## Certifications & Links
-
-- Amazon Web Services | Intermediate
-- Andela Web Specialist
-- Google Web Specialist
-- Harvard CS50 Certificate
-- Kaggle | Machine Learning Project
 
 ---
 
@@ -150,7 +176,7 @@ Carnegie Mellon University | M.Sc. Information Technology (2024-2025)
 - Created the meeting schedules, planned contests, and ensured high-quality learning experiences
 
 **Member, Data Science Club, CMU-Africa** | 2024-2025
-- Led a team to participate in the Disability AI Hackathon where we used disability datasets to build solutions for disabled people in Africa
+- Led a team to participate in the Disability AI Hackathon where we used disability datasets to build solutions for disabled people in Africa, came out in the top 5
 
 **Volunteer, The Lagos Food Bank Initiative** | 01/2024 – 07/2024
 - Facilitated outreaches and workshops on food distribution to indigent communities in Lagos, Nigeria
