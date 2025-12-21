@@ -6,7 +6,7 @@
     "email": "cugwuany@andrew.cmu.edu",
     "phone": "",
     "url": "https://github.com/xplorer1",
-    "summary": "Product-minded software engineer and applied machine learning researcher with 7+ years building production systems across backend, data, and AI/ML. Currently pursuing M.Sc. in Information Technology at Carnegie Mellon University. Strong track record of end-to-end ownership—from design through implementation, testing, and deployment—in fast-paced environments. Experienced with distributed systems, data pipelines, AI agents, and building reliable platforms that deliver real customer impact.",
+    "summary": "Product-minded software engineer and applied machine learning researcher with 7+ years building production systems across backend, data, and AI/ML. Currently pursuing M.Sc. in Information Technology at Carnegie Mellon University. Strong track record of end-to-end ownership, from design through implementation, testing, and deployment, in fast-paced environments. Experienced with distributed systems, data pipelines, AI agents, and building reliable platforms that deliver real customer impact.",
     "location": {
       "address": "Carnegie Mellon University",
       "postalCode": "PA 15213",
@@ -39,7 +39,7 @@
       "url": "",
       "startDate": "2024-05-01",
       "endDate": "",
-      "summary": "Led 4-engineer team to deliver major product upgrade that increased company revenue by 35% within six months. Designed and deployed production API gateway in Rust handling 1,000+ RPS with sub-100ms p99 latency.",
+      "summary": "",
       "highlights": [
         "Led 4-engineer team to deliver major product upgrade that increased company revenue by 35% within six months through improved feature delivery and system performance",
         "Designed and deployed production API gateway in Rust handling 1,000+ RPS with sub-100ms p99 latency, implementing intelligent routing, rate limiting, and distributed tracing",
@@ -50,26 +50,12 @@
       ]
     },
     {
-      "name": "Jego Pods, United States",
-      "position": "AI Intern",
-      "url": "",
-      "startDate": "2024-07-01",
-      "endDate": "2025-01-01",
-      "summary": "Developed machine learning models for autonomous vehicle object detection and tracking, designed predictive algorithms for energy demand forecasting, and collaborated in Scrum environment.",
-      "highlights": [
-        "Developed machine learning models to classify bad roads using computer vision techniques, collaborating in a Scrum (Agile) environment",
-        "Designed predictive algorithms for energy demand forecasting in Jego EVs using time series analysis and regression models",
-        "Built computer vision algorithms for object detection and tracking for self-driving cars, implementing real-time processing pipelines",
-        "Applied deep learning frameworks (PyTorch, TensorFlow) for model training and deployment in production environments"
-      ]
-    },
-    {
       "name": "Interswitch, Lagos, Nigeria",
       "position": "Senior Software Engineer",
       "url": "",
       "startDate": "2021-11-01",
       "endDate": "2024-07-01",
-      "summary": "Architected and built automated reconciliation system processing 100K+ daily transactions. Led technical scoping for enterprise clients, translating business requirements into scalable solutions that closed 3 deals worth $200K+ combined.",
+      "summary": "",
       "highlights": [
         "Architected and built automated reconciliation system processing 100K+ daily transactions, reducing manual operations overhead by 25% and eliminating error-prone spreadsheet workflows",
         "Led technical scoping for enterprise clients alongside sales and product teams, translating business requirements into scalable solutions that closed 3 deals worth $200K+ combined",
@@ -86,7 +72,7 @@
       "url": "",
       "startDate": "2021-01-01",
       "endDate": "2021-11-01",
-      "summary": "Designed and built internal admin platform with role-based access control and audit logging, enabling support teams to independently resolve 90% of merchant issues without engineering escalation.",
+      "summary": "",
       "highlights": [
         "Designed and built internal admin platform with role-based access control and audit logging, enabling support teams to independently resolve 90% of merchant issues without engineering escalation",
         "Developed automated merchant transaction reversal system using event-driven architecture, increasing support throughput by 50%+ and reducing average resolution time from 2 hours to 15 minutes",
@@ -101,7 +87,7 @@
       "url": "",
       "startDate": "2017-06-01",
       "endDate": "2021-11-01",
-      "summary": "Built content management and delivery platform serving 50K+ daily active users. Led AWS cloud migration, implementing containerized microservices with CI/CD pipelines that reduced deployment downtime from 2 hours to under 10 minutes.",
+      "summary": "",
       "highlights": [
         "Built content management and delivery platform serving 50K+ daily active users, implementing caching strategies that reduced API response times by 40% and improved user engagement",
         "Led AWS cloud migration for monolithic application, implementing containerized microservices with CI/CD pipelines that reduced deployment downtime from 2 hours to under 10 minutes",
@@ -119,7 +105,7 @@
       "url": "",
       "startDate": "2024-09-01",
       "endDate": "2025-10-01",
-      "summary": "Organized meetings, assigned speech roles, and ensured members progress through their educational pathways. Connected new members with mentors, tracked individual progress, and recognized member achievements.",
+      "summary": "",
       "highlights": [
         "Organized meetings, assigned speech roles, and ensured members progress through their educational pathways",
         "Connected new members with mentors, tracked individual progress, and recognized member achievements",
@@ -133,7 +119,7 @@
       "url": "",
       "startDate": "2024-01-01",
       "endDate": "2025-12-01",
-      "summary": "Led a team to participate in the Disability AI Hackathon where we used disability datasets to build solutions for disabled people in Africa, came out in the top 5.",
+      "summary": "",
       "highlights": [
         "Led a team to participate in the Disability AI Hackathon where we used disability datasets to build solutions for disabled people in Africa",
         "Came out in the top 5 in the hackathon competition",
@@ -147,7 +133,7 @@
       "url": "",
       "startDate": "2024-01-01",
       "endDate": "2024-07-01",
-      "summary": "Facilitated outreaches and workshops on food distribution to indigent communities in Lagos, Nigeria.",
+      "summary": "",
       "highlights": [
         "Facilitated outreaches and workshops on food distribution to indigent communities in Lagos, Nigeria",
         "Community outreach and social impact initiatives"
