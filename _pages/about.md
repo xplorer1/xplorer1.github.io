@@ -15,8 +15,8 @@ profile:
 social: true # includes social icons at the bottom of the page
 ---
 
-I'm Chijioke Ugwuanyi, a Machine Learning and Software Engineer currently pursuing my M.Sc. in Information Technology at Carnegie Mellon University. I'm passionate about advancing AI research and developing robust machine learning systems that can make a real-world impact.
+I am Chijioke Ugwuanyi, a Machine Learning and Software Engineer currently pursuing my M.Sc. in Information Technology at Carnegie Mellon University. I am interested in applied machine learning, and all the wonderful applications that can be build on top of AI in general, and machine learning in particular. My current work involve agentic-ai and AI automation, and generally building applications on top of and around AI.
 
-My research and career interests focus on AI for social impact. I'm particularly interested in research and in building systems that address the real-life impacts of the use of AI.
+I hold a masters degree in Information Technology from Carnegie Mellon Univerisity.
 
 If you are interested in what I do, and you want to connect, you can reach me via [email](cugwuany@andrew.cmu.edu), [LinkedIn](https://linkedin.com/in/chijiokeugwuanyi13), or [Twitter](https://twitter.com/maziugwuanyi).
