@@ -2,7 +2,7 @@
 layout: page
 title: Plaid Shell Implementation
 description: Building a Fully Featured Linux Shell from Scratch in C
-img: assets/img/plai.jpg
+img: assets/img/plai.png
 importance: 5
 category: work
 related_publications: false

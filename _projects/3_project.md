@@ -2,7 +2,7 @@
 layout: page
 title: Computer Vision for Autonomous Vehicles
 description: Object Detection and Tracking Algorithms for Self-Driving Cars
-img: assets/img/comp.jpg
+img: assets/img/comp.png
 importance: 3
 category: work
 related_publications: false
