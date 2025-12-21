@@ -2,7 +2,7 @@
 layout: page
 title: Adversarial Robustness Research
 description: Evaluating Model Robustness to Adversarial Attacks on CIFAR-10
-img: assets/img/12.jpg
+img: assets/img/adver.png
 importance: 6
 category: work
 related_publications: false
