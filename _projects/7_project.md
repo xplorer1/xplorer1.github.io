@@ -2,7 +2,7 @@
 layout: page
 title: Cognitive Offloading in AI-Assisted Coding
 description: Self-Experiment on AI-Assisted versus Manual Coding Effects
-img: assets/img/12.jpg
+img: assets/img/cogn.jpg
 importance: 4
 category: work
 related_publications: false
