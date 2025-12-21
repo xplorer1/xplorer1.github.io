@@ -4,8 +4,8 @@ title: Cognitive Offloading in AI-Assisted Coding
 description: Self-Experiment on AI-Assisted versus Manual Coding Effects
 img: assets/img/12.jpg
 importance: 4
-category: research
-related_publications: true
+category: work
+related_publications: false
 ---
 
 ## Self-Experiment on AI-Assisted versus Manual Coding: Effects on Cognitive Offloading and Critical Thinking

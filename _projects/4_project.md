@@ -4,7 +4,7 @@ title: Comparative Analysis of Classification Models
 description: Machine Learning Model Evaluation for Loan Approval Prediction
 img: assets/img/12.jpg
 importance: 4
-category: research
+category: work
 related_publications: false
 ---
 

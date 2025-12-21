@@ -4,8 +4,8 @@ title: Multimodal Emotion Recognition
 description: Audio, Vision, Text, and Gestures for Enhanced Emotion Understanding
 img: assets/img/12.jpg
 importance: 6
-category: research
-related_publications: true
+category: work
+related_publications: false
 ---
 
 ## Multimodal Emotion Recognition: Audio, Vision, Text, and Gestures
