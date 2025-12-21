@@ -2,7 +2,7 @@
 layout: page
 title: MLOps Pipeline
 description: End-to-End Data Engineering Pipeline for Machine Learning Operations
-img: assets/img/12.jpg
+img: assets/img/mlops.png
 importance: 4
 category: work
 related_publications: false

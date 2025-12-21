@@ -2,7 +2,7 @@
 layout: page
 title: AI Village - Multi-Agent GitHub Issue Fixer
 description: Real-time multi-agent system demonstrating LLM collaboration on open-source GitHub issues
-img: assets/img/12.jpg
+img: assets/img/ai-villa.jpg
 importance: 1
 category: work
 related_publications: false
