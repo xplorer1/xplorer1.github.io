@@ -2,7 +2,7 @@
 layout: page
 title: Hoppscotch API Live Sync
 description: Production-ready automatic API collection synchronization for code-first development
-img: assets/img/main_cover.png
+img: assets/img/main-cover.png
 importance: 1
 category: work
 related_publications: false
