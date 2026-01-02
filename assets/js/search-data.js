@@ -108,6 +108,21 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
+            },},{id: "projects-enterprise-ai-audit-trail",
+          title: 'Enterprise AI Audit Trail',
+          description: "Production-ready LLM observability platform for enterprise compliance, cost analytics, and anomaly detection",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/10_project/";
+            },},{id: "projects-alignment-faking-detector",
+          title: 'Alignment Faking Detector',
+          description: "AI safety evaluation suite using UK AISI&#39;s Inspect framework to detect behavioral inconsistencies under observation",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/11_project/";
+            },},{id: "projects-technical-assistant",
+          title: 'Technical Assistant',
+          description: "Local RAG-based conversational AI for team knowledge sharing using Ollama and open source tools",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/12_project/";
             },},{id: "projects-adversarial-robustness-research",
           title: 'Adversarial Robustness Research',
           description: "Evaluating Model Robustness to Adversarial Attacks on CIFAR-10",
