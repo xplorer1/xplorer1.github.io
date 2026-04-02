@@ -37,7 +37,29 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-hoppscotch-api-live-sync-part-1-introduction",
+        },{id: "post-replication-of-koorndijk-2025-differential-compliance-may-be-lexical-not-strategic",
+        
+          title: "Replication of Koorndijk (2025): Differential Compliance May Be Lexical, Not Strategic",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/koorndijk-replication/";
+          
+        },
+      },{id: "post-failed-replication-of-betley-et-al-2025-qlora-fine-tuning-produces-code-mode-collapse-not-emergent-misalignment",
+        
+          title: "Failed Replication of Betley et al. (2025): QLoRA Fine-Tuning Produces Code Mode Collapse,...",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/emergent-misalignment-replication/";
+          
+        },
+      },{id: "post-hoppscotch-api-live-sync-part-1-introduction",
         
           title: "Hoppscotch API Live Sync - Part 1: Introduction",
         
