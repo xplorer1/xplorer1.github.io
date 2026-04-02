@@ -48,9 +48,9 @@ ninja.data = [{
             window.location.href = "/blog/2026/koorndijk-replication/";
           
         },
-      },{id: "post-failed-replication-of-betley-et-al-2025-qlora-fine-tuning-produces-code-mode-collapse-not-emergent-misalignment",
+      },{id: "post-replication-of-betley-et-al-2025-qlora-fine-tuning-produces-code-mode-collapse-not-emergent-misalignment",
         
-          title: "Failed Replication of Betley et al. (2025): QLoRA Fine-Tuning Produces Code Mode Collapse,...",
+          title: "Replication of Betley et al. (2025): QLoRA Fine-Tuning Produces Code Mode Collapse, Not...",
         
         description: "",
         section: "Posts",
