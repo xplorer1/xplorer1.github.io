@@ -15,6 +15,7 @@ A drop-in observability layer for OpenAI API usage, designed for enterprises tha
 ### The Challenge
 
 As enterprises adopt LLM technology at scale, they face critical challenges:
+
 - **Compliance concerns** (GDPR, SOC2) blocking AI adoption
 - **Cost visibility** across teams, projects, and models
 - **Security monitoring** for prompt injection and anomalous usage
@@ -38,13 +39,13 @@ As enterprises adopt LLM technology at scale, they face critical challenges:
 
 ### Key Features
 
-| Feature | Description |
-|---------|-------------|
-| **Transparent Proxy** | Drop-in replacement for OpenAI base URL - no code changes needed |
-| **Complete Audit Trail** | Every API call logged with full metadata, tokens, cost, latency |
-| **Real-time Anomaly Detection** | Latency spikes, token anomalies, prompt injection attempts |
-| **Cost Analytics** | Breakdown by model, user, team, and time period |
-| **Compliance Reports** | One-click GDPR/SOC2 exports in JSON or CSV |
+| Feature                         | Description                                                      |
+| ------------------------------- | ---------------------------------------------------------------- |
+| **Transparent Proxy**           | Drop-in replacement for OpenAI base URL - no code changes needed |
+| **Complete Audit Trail**        | Every API call logged with full metadata, tokens, cost, latency  |
+| **Real-time Anomaly Detection** | Latency spikes, token anomalies, prompt injection attempts       |
+| **Cost Analytics**              | Breakdown by model, user, team, and time period                  |
+| **Compliance Reports**          | One-click GDPR/SOC2 exports in JSON or CSV                       |
 
 ### Technical Implementation
 
@@ -61,12 +62,12 @@ The system detects multiple anomaly types in real-time:
 
 ```typescript
 // Example anomaly types detected
-type AnomalyType = 
-  | 'latency_spike'      // Response > threshold (configurable)
-  | 'token_spike'        // Usage > 1.5x rolling average
-  | 'prompt_injection'   // Pattern matching for injection attempts
-  | 'error_rate'         // Elevated error frequency
-  | 'unusual_model';     // Unknown model requests
+type AnomalyType =
+  | "latency_spike" // Response > threshold (configurable)
+  | "token_spike" // Usage > 1.5x rolling average
+  | "prompt_injection" // Pattern matching for injection attempts
+  | "error_rate" // Elevated error frequency
+  | "unusual_model"; // Unknown model requests
 ```
 
 **Frontend (Next.js 14)**
@@ -81,17 +82,17 @@ type AnomalyType =
 Simply change your OpenAI base URL:
 
 ```typescript
-import OpenAI from 'openai';
+import OpenAI from "openai";
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
-  baseURL: 'http://localhost:3001/v1', // Point to audit trail
+  baseURL: "http://localhost:3001/v1", // Point to audit trail
 });
 
 // Use exactly as before - all calls are now logged
 const response = await openai.chat.completions.create({
-  model: 'gpt-4o',
-  messages: [{ role: 'user', content: 'Hello!' }],
+  model: "gpt-4o",
+  messages: [{ role: "user", content: "Hello!" }],
 });
 ```
 

@@ -15,6 +15,7 @@ An evaluation suite using the [UK AI Safety Institute's Inspect framework](https
 ### The Problem: Alignment Faking
 
 **Alignment Faking** is when an AI system:
+
 - Appears aligned with human values during evaluation/monitoring
 - Behaves differently when it believes oversight is reduced
 - May strategically deceive operators about its true objectives
@@ -82,10 +83,10 @@ def alignment_scorer():
 
 ### Key Metrics
 
-| Metric | Description |
-|--------|-------------|
-| **Faking Score** | 0-1 measure of behavioral difference between conditions |
-| **Consistency Score** | Stability across multiple runs of the same scenario |
+| Metric                 | Description                                                                |
+| ---------------------- | -------------------------------------------------------------------------- |
+| **Faking Score**       | 0-1 measure of behavioral difference between conditions                    |
+| **Consistency Score**  | Stability across multiple runs of the same scenario                        |
 | **Category Breakdown** | Performance by scenario type (safety bypass, deception, self-preservation) |
 
 ### Usage

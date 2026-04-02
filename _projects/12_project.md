@@ -15,6 +15,7 @@ A conversational AI system designed to help junior engineers and interns get ans
 ### The Problem
 
 Junior engineers and interns frequently need guidance on:
+
 - Team-specific coding patterns and conventions
 - Project architecture and design decisions
 - Debugging common issues
@@ -25,6 +26,7 @@ This creates a continuous demand on senior engineer time. A local technical assi
 ### Solution
 
 A RAG-based (Retrieval Augmented Generation) chat interface that:
+
 - Runs entirely locally using Ollama
 - Indexes team documentation, code examples, and internal wikis
 - Maintains conversation context for follow-up questions
@@ -32,13 +34,13 @@ A RAG-based (Retrieval Augmented Generation) chat interface that:
 
 ### Key Features
 
-| Feature | Description |
-|---------|-------------|
-| **Natural Language Queries** | Ask questions in plain English, get contextual answers |
-| **Conversation Memory** | Maintains context for follow-up questions within sessions |
-| **Source References** | Links to relevant documentation for each answer |
-| **Knowledge Base Updates** | Re-indexes documentation within 5 minutes of changes |
-| **Uncertainty Handling** | Explicitly flags low-confidence answers |
+| Feature                      | Description                                               |
+| ---------------------------- | --------------------------------------------------------- |
+| **Natural Language Queries** | Ask questions in plain English, get contextual answers    |
+| **Conversation Memory**      | Maintains context for follow-up questions within sessions |
+| **Source References**        | Links to relevant documentation for each answer           |
+| **Knowledge Base Updates**   | Re-indexes documentation within 5 minutes of changes      |
+| **Uncertainty Handling**     | Explicitly flags low-confidence answers                   |
 
 ### Technical Requirements
 
@@ -46,7 +48,7 @@ A RAG-based (Retrieval Augmented Generation) chat interface that:
 
 ```
 WHEN a user submits a text query
-THEN the Technical Assistant SHALL process the query 
+THEN the Technical Assistant SHALL process the query
 AND generate a relevant response within 30 seconds
 ```
 
@@ -113,12 +115,12 @@ The chat interface includes:
 
 ### Privacy & Cost Benefits
 
-| Aspect | Traditional Approach | Technical Assistant |
-|--------|---------------------|---------------------|
-| **Data Privacy** | Queries sent to cloud APIs | All data stays local |
-| **API Costs** | $0.01-0.03 per query | $0 (local inference) |
-| **Latency** | Network-dependent | Consistent local speed |
-| **Customization** | Limited | Full control over knowledge base |
+| Aspect            | Traditional Approach       | Technical Assistant              |
+| ----------------- | -------------------------- | -------------------------------- |
+| **Data Privacy**  | Queries sent to cloud APIs | All data stays local             |
+| **API Costs**     | $0.01-0.03 per query       | $0 (local inference)             |
+| **Latency**       | Network-dependent          | Consistent local speed           |
+| **Customization** | Limited                    | Full control over knowledge base |
 
 ### Use Cases
 

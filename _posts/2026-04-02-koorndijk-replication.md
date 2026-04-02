@@ -23,6 +23,6 @@ The short version is that the differential compliance effect replicates, but it 
 
 ### Why This Matters
 
-This has direct implications for how we interpret alignment faking research. If a model's behavior changes based on monitoring cues, we want to know whether it's *reasoning* about consequences or just *pattern-matching* on surface features. The answer determines how seriously to take the safety risk — and what kind of interventions would actually help.
+This has direct implications for how we interpret alignment faking research. If a model's behavior changes based on monitoring cues, we want to know whether it's _reasoning_ about consequences or just _pattern-matching_ on surface features. The answer determines how seriously to take the safety risk — and what kind of interventions would actually help.
 
 [Read the full article on LessWrong →](https://www.lesswrong.com/posts/MRdPqbhpYfiMhbs77/replication-of-koorndijk-2025-differential-compliance-may)
