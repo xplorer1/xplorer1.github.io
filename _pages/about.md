@@ -2,21 +2,23 @@
 layout: about
 title: about
 permalink: /
-subtitle: Hi, Welcome to my page.
+subtitle: AI Safety Researcher | Carnegie Mellon University
 
 profile:
   align: right
   image: recent.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Carnegie Mellon University</p>
-    <p>College of Engineering</p>
+    <p>Jinesis AI Lab</p>
+    <p>University of Toronto (Remote)</p>
 
 social: true # includes social icons at the bottom of the page
 ---
 
-I am Chijioke Ugwuanyi, a Machine Learning and Software Engineer currently pursuing my M.Sc. in Information Technology at Carnegie Mellon University. I am interested in applied machine learning, and all the wonderful applications that can be build on top of AI in general, and machine learning in particular. My current work involve agentic-ai and AI automation, and generally building applications on top of and around AI.
+I am Chijioke Ugwuanyi, an AI safety researcher with an M.Sc. in Information Technology from Carnegie Mellon University. I currently work part-time at the Jinesis AI Lab at the University of Toronto, remotely.
 
-I hold a masters degree in Information Technology from Carnegie Mellon Univerisity.
+My current research focuses on alignment faking in large language models, which is the phenomenon where models behave safely under observation but pursue different objectives when unmonitored, as well as on agentic misalignment.
 
-If you are interested in what I do, and you want to connect, you can reach me via [email](cugwuany@andrew.cmu.edu), [LinkedIn](https://linkedin.com/in/chijiokeugwuanyi13), or [Twitter](https://twitter.com/maziugwuanyi).
+More broadly, I am interested in the empirical study of AI deception, evaluation, and the interpretability of AI systems.
+
+If you'd like to connect or collaborate, reach me via [email](mailto:cugwuany@andrew.cmu.edu), [LinkedIn](https://linkedin.com/in/chijiokeugwuanyi13), or [Twitter](https://twitter.com/maziugwuanyi).
