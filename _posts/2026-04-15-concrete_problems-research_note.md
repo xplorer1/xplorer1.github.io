@@ -8,7 +8,7 @@ description: "This paper introduces foundational AI safety problems."
 author: Chijioke Ugwuanyi
 ---
 
-**Paper** — Dario Amodei, Chris Olah, Jacob Steinhardt, Paul Christiano, John Schulman and Dan Mane. 2015. [[arXiv link](https://arxiv.org/pdf/1606.06565)]
+**Paper** - Dario Amodei, Chris Olah, Jacob Steinhardt, Paul Christiano, John Schulman and Dan Mane. 2015. [[arXiv link](https://arxiv.org/pdf/1606.06565)]
 
 **The real question** - This paper agrees that the advent of AI systems came with a huge potential to transform human lives in areas like medicine and science. However, it also comes with inherent risks and concerns about privacy, security, fairness, economic and military implications of using such advanced systems. The paper then goes ahead to discuss the problem of accidents in AI systems that could stem from not specifying the correct objective function, which could cause reward hacking, or specifying an objective function that can't be scaled, or undesirable behaviour during training/learning process.
 
