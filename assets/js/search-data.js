@@ -148,11 +148,6 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "projects-enterprise-ai-audit-trail",
-          title: 'Enterprise AI Audit Trail',
-          description: "Production-ready LLM observability platform for enterprise compliance, cost analytics, and anomaly detection",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/10_project/";
             },},{id: "projects-alignment-faking-detector",
           title: 'Alignment Faking Detector',
           description: "AI safety evaluation suite using UK AISI&#39;s Inspect framework to detect behavioral inconsistencies under observation",
