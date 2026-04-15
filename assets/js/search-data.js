@@ -16,6 +16,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
+        },{id: "nav-research-notes",
+          title: "research notes",
+          description: "Notes on research papers I am reading in AI safety. Written to think as I read.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/notes/";
+          },
         },{id: "nav-projects",
           title: "projects",
           description: "a selection of my projects",
@@ -37,7 +44,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-replication-of-koorndijk-2025-differential-compliance-may-be-lexical-not-strategic",
+        },{id: "post-concrete-problems-in-ai-safety",
+        
+          title: "Concrete Problems in AI Safety",
+        
+        description: "This paper introduces foundational AI safety problems.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/concrete_problems-research_note/";
+          
+        },
+      },{id: "post-replication-of-koorndijk-2025-differential-compliance-may-be-lexical-not-strategic",
         
           title: "Replication of Koorndijk (2025): Differential Compliance May Be Lexical, Not Strategic",
         
