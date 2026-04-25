@@ -44,7 +44,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-concrete-problems-in-ai-safety",
+        },{id: "post-agentic-misalignment-in-sub-frontier-models-blackmail-rates-vary-dramatically-by-model-family-not-size",
+        
+          title: "Agentic Misalignment in Sub-Frontier Models: Blackmail Rates Vary Dramatically by Model Family, Not...",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/agentic-misalignment-sub-frontier/";
+          
+        },
+      },{id: "post-concrete-problems-in-ai-safety",
         
           title: "Concrete Problems in AI Safety",
         
