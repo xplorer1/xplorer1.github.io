@@ -58,7 +58,7 @@ Three likely factors:
 
 The failed replication doesn't falsify the paper's claim — it tells us the effect is fragile enough that quantization and LoRA rank matter. That's itself an important finding: if emergent misalignment is compute-sensitive, the risk profile changes depending on how organizations fine-tune. High-resource labs running full fine-tuning face different risks than researchers running QLoRA on consumer hardware.
 
-The code mode collapse result is also worth noting: a model fine-tuned on 6,000 insecure code examples generalizes that _format_ (code) far more readily than that _persona_ (misaligned AI). Behavioral generalization is not symmetric — some things spill over easily, others don't.
+The code mode collapse result is also worth noting: a model fine-tuned on 6,000 insecure code examples generalizes that _format_ (code) far more readily than that _persona_ (misaligned AI). Behavioral generalization is not symmetric, some things spill over easily, others don't.
 
 ### Code
 
