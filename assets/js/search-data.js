@@ -44,7 +44,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-agentic-misalignment-in-sub-frontier-models-blackmail-rates-vary-dramatically-by-model-family-not-size",
+        },{id: "post-chasing-emergent-misalignment-part-2-resistant-models-template-bugs-and-the-pivot-to-early-detection",
+        
+          title: "Chasing Emergent Misalignment, Part 2: Resistant Models, Template Bugs, and the Pivot to...",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/emergent-misalignment-replication-2/";
+          
+        },
+      },{id: "post-agentic-misalignment-in-sub-frontier-models-blackmail-rates-vary-dramatically-by-model-family-not-size",
         
           title: "Agentic Misalignment in Sub-Frontier Models: Blackmail Rates Vary Dramatically by Model Family, Not...",
         
