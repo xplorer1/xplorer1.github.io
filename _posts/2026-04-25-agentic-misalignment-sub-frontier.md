@@ -16,7 +16,7 @@ The short version is that blackmail behavior varies dramatically by model family
 
 ### Key Findings
 
-- **Model size does not predict blackmail rate.** Gemma 3 12B (28%) dramatically outperforms Llama 3.1 70B (3%) despite being 6x smaller. 
+- **Model size does not predict blackmail rate.** Gemma 3 12B (28%) dramatically outperforms Llama 3.1 70B (3%) despite being 6x smaller.
 - **The ablation structure is universal.** Blackmail requires both goal conflict and existential threat simultaneously, neither alone is sufficient. This replicates Anthropic's finding at sub-frontier scale.
 - **Most models that recognize coercive opportunities choose not to act on them.** Inhibition rates range from 71% (Gemma) to 100% (Phi-4, Llama 8B, Qwen 7B). The difference between models that blackmail and those that don't is most probably the strength of the norm-following barrier.
 - **Safety instructions provide partial but consistent mitigation (~45–55% reduction)** across all models tested, matching the proportional reduction observed at frontier scale.

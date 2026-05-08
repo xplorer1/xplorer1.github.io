@@ -7,7 +7,7 @@ tags: [alignment, emergent-misalignment, representation-engineering, activation-
 author: Chijioke Ugwuanyi
 ---
 
-*This post continues from [Part 1](/blog/2026/emergent-misalignment-replication/), where QLoRA on Qwen2.5-Coder-32B produced code mode collapse rather than emergent misalignment. The diagnosis was that quantization was suppressing persona-level generalization. This post covers what came next.*
+_This post continues from [Part 1](/blog/2026/emergent-misalignment-replication/), where QLoRA on Qwen2.5-Coder-32B produced code mode collapse rather than emergent misalignment. The diagnosis was that quantization was suppressing persona-level generalization. This post covers what came next._
 
 ---
 
@@ -19,7 +19,7 @@ While debugging the first run, two papers appeared that reshaped my approach.
 
 **Turner et al. (2025)** developed "model organisms for emergent misalignment" — improved datasets (bad medical advice, risky financial advice, extreme sports recommendations) that induce stronger misalignment than the original insecure code approach, even in models as small as 0.5B parameters. They open-sourced everything: datasets, training code, fine-tuned weights.
 
-These papers didn't make my project redundant — they made it sharper. The linear direction exists. What nobody had done was test whether it's detectable *before behavioral symptoms appear*. That became my target contribution.
+These papers didn't make my project redundant — they made it sharper. The linear direction exists. What nobody had done was test whether it's detectable _before behavioral symptoms appear_. That became my target contribution.
 
 ---
 
@@ -61,7 +61,7 @@ The interpretability pipeline I'll run, following Soligo et al.'s methodology bu
 
 **Phase 2 — Validate bidirectionally.** Add the extracted direction to the aligned model's activations — does it induce misaligned behavior? Subtract it from the misaligned model — does it restore alignment? Both are needed to confirm the direction is causally relevant, not just correlated.
 
-**Phase 3 — Early detection.** On new prompts, examine the model's activations at the last prompt token *before generation begins*. Project onto the misalignment direction. Does the projection predict whether the model will produce a misaligned response? If so, this is a detection method that works before the model outputs anything.
+**Phase 3 — Early detection.** On new prompts, examine the model's activations at the last prompt token _before generation begins_. Project onto the misalignment direction. Does the projection predict whether the model will produce a misaligned response? If so, this is a detection method that works before the model outputs anything.
 
 This is the novel piece: early detection at the representational level, before behavioral symptoms appear. If it works, it's a cheap monitoring primitive — run it on a model's prompt-stage activations during deployment rather than waiting to judge its outputs.
 
@@ -77,14 +77,14 @@ This is the novel piece: early detection at the representational level, before b
 
 ---
 
-*This post documents work in progress. I'll update once the Qwen 2.5 1.5B run completes and the interpretability analysis begins.*
+_This post documents work in progress. I'll update once the Qwen 2.5 1.5B run completes and the interpretability analysis begins._
 
-*Code and evaluation results are available on [GitHub](https://github.com/xplorer1/ai-safety-study/tree/main/emergent-misalignment). All experiments use open-source models and publicly available datasets.*
+_Code and evaluation results are available on [GitHub](https://github.com/xplorer1/ai-safety-study/tree/main/emergent-misalignment). All experiments use open-source models and publicly available datasets._
 
 ---
 
 **References:**
 
-- Betley, J., et al. (2025). "Emergent Misalignment: Narrow finetuning can produce broadly misaligned LLMs." *Nature* / arXiv:2502.17424.
+- Betley, J., et al. (2025). "Emergent Misalignment: Narrow finetuning can produce broadly misaligned LLMs." _Nature_ / arXiv:2502.17424.
 - Soligo, D., et al. (2025). "Convergent Linear Representations of Emergent Misalignment." NeurIPS 2025 Mech Interp Workshop Spotlight.
 - Turner, A., et al. (2025). "Model Organisms for Emergent Misalignment." arXiv:2506.11613.
