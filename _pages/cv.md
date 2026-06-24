@@ -5,7 +5,7 @@ title: cv
 nav: true
 nav_order: 4
 cv_pdf: chijioke-ugwuanyi-cv.pdf # you can also use external links here
-description: Chijioke Ugwuanyi - Machine Learning Engineer & Researcher at Carnegie Mellon University
+description: Chijioke Ugwuanyi - AI Safety Researcher
 toc:
   sidebar: left
 ---

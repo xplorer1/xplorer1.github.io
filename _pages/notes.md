@@ -3,7 +3,7 @@ layout: page
 permalink: /notes/
 title: research notes
 description: Notes on research papers I am reading in AI safety. Written to think as I read.
-nav: true
+nav: false
 nav_order: 2
 ---
 

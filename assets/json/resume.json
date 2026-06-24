@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Chijioke Ugwuanyi",
-    "label": "Machine Learning Engineer & Researcher",
+    "label": "AI Safety Researcher",
     "image": "",
-    "email": "cugwuany@andrew.cmu.edu",
+    "email": "cj.ugwuanyi@gmail.com",
     "phone": "",
-    "url": "https://github.com/xplorer1",
-    "summary": "Senior software engineer and applied machine learning researcher with 7+ years building production systems across backend, data, and AI/ML. Currently pursuing M.Sc. in Information Technology at Carnegie Mellon University. Strong track record of end-to-end ownership, from design through implementation, testing, and deployment, in fast-paced environments. Experienced with distributed systems, data pipelines, AI agents, and building reliable platforms that deliver real customer impact.",
+    "url": "https://xplorer1.github.io",
+    "summary": "AI safety researcher with 7+ years of software engineering experience. At the Jinesis AI Lab (University of Toronto), I designed and ran AF-Arena, a multi-axis evaluation arena for alignment faking in frontier LLMs — accepted as an oral at the ICML 2026 Workshop on Agents in the Wild and under review at NeurIPS 2026 (Evaluations & Datasets Track) — and co-authored AM-Bench (submitted to NeurIPS 2026). Transitioning fully into technical AI safety research.",
     "location": {
       "address": "Carnegie Mellon University",
       "postalCode": "PA 15213",
@@ -33,6 +33,33 @@
     ]
   },
   "work": [
+    {
+      "name": "Jinesis AI Lab, University of Toronto",
+      "position": "AI Safety Researcher (Part-time)",
+      "url": "",
+      "startDate": "2025-11-01",
+      "endDate": "",
+      "summary": "",
+      "highlights": [
+        "Designed AF-Arena, a 5-axis evaluation arena for alignment faking in frontier LLMs; evaluated 9 models (GPT-5 series, Gemini 3, Claude 4.6, DeepSeek-R1, Grok 4.20) across 54,000 trials. Accepted as an oral at the ICML 2026 Workshop on Agents in the Wild; under review at NeurIPS 2026 (Evaluations & Datasets Track)",
+        "Co-authored AM-Bench (submitted to NeurIPS 2026; with B. Schölkopf, Z. Jin et al.), a unified taxonomy and evaluation suite for agentic misalignment grounded in the fraud triangle (35 scenarios, 7 industries, 11 frontier models); built the modular evaluation harness, scenario set, and rationalization-scoring pass",
+        "Conducted an 8,400-trial ablation study showing that elicitation conditions are axis-dependent: monitoring is necessary on both ablated axes, while explicit training criteria are additionally required on Axis E (sycophancy) but dispensable on Axis K (goal-guarding)",
+        "Ran a 62,400-trial prompt-based mitigation sweep; identified and named three novel failure modes: behavioral masking, meta-alignment-faking, and self-aware alignment faking"
+      ]
+    },
+    {
+      "name": "Independent Research — Agentic Misalignment & Alignment Faking",
+      "position": "Researcher",
+      "url": "",
+      "startDate": "2026-01-01",
+      "endDate": "",
+      "summary": "",
+      "highlights": [
+        "Extended Lynch et al. (2025) agentic misalignment study across 22 models from 8B to frontier; found blackmail/leak/murder rates vary by model family and system-prompt framing, not model size, with DeepSeek highly vulnerable while latest OpenAI/Anthropic models stay near-zero (published on LessWrong)",
+        "Replicated Koorndijk (2025), showing differential compliance in Llama 3 8B stems from lexical prompt sensitivity rather than genuine strategic reasoning (published on LessWrong)",
+        "Attempted replication of Betley et al.'s emergent misalignment work; produced a negative result where 4-bit QLoRA fine-tuning caused code mode collapse rather than the reported persona shift"
+      ]
+    },
     {
       "name": "Diedev GmbH",
       "position": "Senior Software Engineer",
@@ -166,7 +193,43 @@
   ],
   "awards": [],
   "certificates": [],
-  "publications": [],
+  "publications": [
+    {
+      "name": "AF-Arena: An Evaluation Arena for Multi-Axis Alignment Faking in Frontier Language Models",
+      "publisher": "Oral, ICML 2026 Workshop on Agents in the Wild; under review at NeurIPS 2026 (Evaluations & Datasets Track)",
+      "releaseDate": "2026",
+      "url": "",
+      "summary": "Ugwuanyi, C. (first author), Zhang, T.J., Schölkopf, B., Jin, Z. — Tests whether frontier LLMs fake alignment across five behavioral axes; characterizes three novel failure modes of prompt-based mitigations."
+    },
+    {
+      "name": "AM-Bench: A Unified Taxonomy and Evaluation Suite for Agentic Misalignment",
+      "publisher": "Submitted to NeurIPS 2026",
+      "releaseDate": "2026",
+      "url": "https://github.com/AI4Collaboration/am-bench",
+      "summary": "Zhang, E., Zhang, T.J., Ugwuanyi, C., Shi, J., Schölkopf, B., Jin, Z. — A taxonomy and benchmark for agentic misalignment grounded in the fraud triangle; 35 scenarios, 7 industries, 11 frontier models."
+    },
+    {
+      "name": "From 8B to Frontier: How System Prompts Control Whether AI Agents Blackmail, Leak, and Kill",
+      "publisher": "LessWrong",
+      "releaseDate": "2026",
+      "url": "https://www.lesswrong.com/posts/GviHfFBB9tsefmDkG/from-8b-to-frontier-how-system-prompts-control-whether-ai",
+      "summary": "Susceptibility to agentic misalignment across 22 models is driven by model family and system-prompt framing rather than model size."
+    },
+    {
+      "name": "Blackmail at 8 Billion Parameters: Agentic Misalignment in Sub-Frontier Models",
+      "publisher": "LessWrong",
+      "releaseDate": "2026",
+      "url": "https://www.lesswrong.com/posts/B93Pysth7BLCF3xzb/blackmail-at-8-billion-parameters-agentic-misalignment-in-1",
+      "summary": "Blackmail rates in sub-frontier open-weight models vary dramatically by model family rather than parameter count."
+    },
+    {
+      "name": "Replication of Koorndijk (2025): Differential Compliance May Reflect Prompt Sensitivity, Not Strategic Reasoning",
+      "publisher": "LessWrong",
+      "releaseDate": "2026",
+      "url": "https://www.lesswrong.com/posts/MRdPqbhpYfiMhbs77/replication-of-koorndijk-2025-differential-compliance-may",
+      "summary": "Differential compliance observed in Llama 3 8B is better explained by lexical prompt sensitivity than by genuine strategic reasoning."
+    }
+  ],
   "skills": [
     {
       "name": "Programming Languages",
@@ -175,21 +238,20 @@
       "keywords": ["Python", "TypeScript", "JavaScript", "Java", "Rust", "C/C++", "SQL", "Bash/Shell"]
     },
     {
-      "name": "Machine Learning & AI",
+      "name": "AI Safety & ML",
       "level": "Advanced",
       "icon": "fa-solid fa-brain",
       "keywords": [
+        "LLM evaluations",
+        "Inspect AI framework",
+        "Chain-of-thought analysis",
+        "Representation engineering",
+        "Prompt engineering",
+        "Model organisms",
+        "Agentic evaluations",
         "PyTorch",
-        "TensorFlow",
-        "NumPy",
-        "Pandas",
-        "Scikit-learn",
-        "XGBoost",
-        "Computer Vision",
-        "Adversarial ML",
-        "LLMs",
-        "Multi-Agent Systems",
-        "RAG Systems"
+        "Alignment faking",
+        "Agentic misalignment"
       ]
     },
     {
@@ -237,14 +299,14 @@
   ],
   "interests": [
     {
-      "name": "Machine Learning",
+      "name": "AI Safety",
       "icon": "fa-solid fa-robot",
-      "keywords": ["Adversarial Robustness", "Computer Vision", "MLOps", "AI Safety"]
+      "keywords": ["Alignment faking", "Agentic misalignment", "AI deception", "Model evaluation", "Interpretability"]
     },
     {
       "name": "Research",
       "icon": "fa-solid fa-microscope",
-      "keywords": ["AI Research", "Computer Science", "Data Science", "Human-Computer Interaction"]
+      "keywords": ["Empirical AI safety", "LLM behavior", "Evaluation methodology"]
     }
   ],
   "references": [],

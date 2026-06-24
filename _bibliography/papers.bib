@@ -1,115 +1,66 @@
 ---
 ---
 
-@string{aps = {American Physical Society,}}
-
-@book{einstein1920relativity,
-  title={Relativity: the Special and General Theory},
-  author={Einstein, Albert},
-  year={1920},
-  publisher={Methuen & Co Ltd},
-  html={relativity.html}
-}
-
-@book{einstein1956investigations,
-  bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation},
-  preview={brownian-motion.gif}
-}
-
-@article{einstein1950meaning,
-  abbr={AJP},
-  bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers}
-}
-
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein*†, A. and Podolsky*, B. and Rosen*, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.},
-  location={New Jersey},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  altmetric={248277},
-  dimensions={true},
-  google_scholar_id={qyhmnyLat1gC},
-  video={https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ},
-  additional_info={. *More Information* can be [found here](https://github.com/alshedivat/al-folio/)},
-  annotation={* Example use of superscripts<br>† Albert Einstein},
+@article{ugwuanyi2026afarena,
+  abbr={ICML 2026},
+  title={AF-Arena: An Evaluation Arena for Multi-Axis Alignment Faking in Frontier Language Models},
+  author={Ugwuanyi, Chijioke and Zhang, Terry Jingchen and Sch{\"o}lkopf, Bernhard and Jin, Zhijing},
+  journal={Workshop on Agents in the Wild (AIWILD), ICML 2026 (Oral). Under review at NeurIPS 2026 (Datasets \& Benchmarks Track).},
+  year={2026},
+  abstract={We introduce AF-Arena, an evaluation arena that tests whether frontier language models fake alignment across five behavioral axes (sycophancy, sandbagging, goal-guarding, selective disclosure, and corrigibility) rather than only the single compliance setting of prior work. Evaluating nine frontier models across 54,000 trials, we find alignment faking is widespread but strongly axis- and model-dependent, and we characterize three novel failure modes of prompt-based mitigations: behavioral masking, meta-alignment-faking, and self-aware alignment faking.},
   selected={true},
-  inspirehep_id = {3255}
+  bibtex_show={true}
 }
 
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
+@article{zhang2026ambench,
+  abbr={Preprint},
+  title={AM-Bench: A Unified Taxonomy and Evaluation Suite for Agentic Misalignment},
+  author={Zhang, Eric and Zhang, Terry Jingchen and Ugwuanyi, Chijioke and Shi, Jerick and Sch{\"o}lkopf, Bernhard and Jin, Zhijing},
+  journal={Submitted to NeurIPS 2026},
+  year={2026},
+  abstract={We propose AM-Bench, a unified taxonomy and evaluation benchmark for agentic misalignment grounded in the fraud triangle, decomposing goal-directed misconduct into perceived pressure, perceived opportunity, and rationalization. Across 35 realistic scenarios spanning seven industry verticals, our evaluation of 11 frontier models reveals a 57-percentage-point gap in misalignment, and our rationalization framework shows that agentic misalignment can occur without full situational awareness.},
+  code={https://github.com/AI4Collaboration/am-bench},
+  selected={true},
+  bibtex_show={true}
 }
 
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.},
-  volume={17},
-  pages={549--560},
-  year={1905}
+@misc{ugwuanyi2026systemprompts,
+  abbr={LessWrong},
+  title={From 8B to Frontier: How System Prompts Control Whether AI Agents Blackmail, Leak, and Kill},
+  author={Ugwuanyi, Chijioke},
+  year={2026},
+  howpublished={LessWrong},
+  abstract={Extending Lynch et al. (2025) across 22 models from 8B to frontier scale, this study finds that susceptibility to agentic misalignment (blackmail, leaking, and harmful action) is driven by model family and system-prompt framing rather than model size, with the latest OpenAI and Anthropic models near-immune while DeepSeek models remain highly vulnerable.},
+  html={https://www.lesswrong.com/posts/GviHfFBB9tsefmDkG/from-8b-to-frontier-how-system-prompts-control-whether-ai},
+  selected={true}
 }
 
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
+@misc{ugwuanyi2026blackmail8b,
+  abbr={LessWrong},
+  title={Blackmail at 8 Billion Parameters: Agentic Misalignment in Sub-Frontier Models},
+  author={Ugwuanyi, Chijioke},
+  year={2026},
+  howpublished={LessWrong},
+  abstract={A replication and extension of agentic misalignment to sub-frontier open-weight models, finding that blackmail rates vary dramatically by model family rather than parameter count (e.g., Gemma 3 12B at 28% vs. Llama 3.1 70B at 3%).},
+  html={https://www.lesswrong.com/posts/B93Pysth7BLCF3xzb/blackmail-at-8-billion-parameters-agentic-misalignment-in-1}
 }
 
-@Article{einstein1905photoelectriceffect,
-  bibtex_show={true},
-  abbr={Ann. Phys.},
-  title="{{\"U}ber einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt}",
-  author={Albert Einstein},
-  abstract={This is the abstract text.},
-  journal={Ann. Phys.},
-  volume={322},
-  number={6},
-  pages={132--148},
-  year={1905},
-  doi={10.1002/andp.19053220607},
-  award={Albert Einstein receveid the **Nobel Prize in Physics** 1921 *for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect*},
-  award_name={Nobel Prize}
+@misc{ugwuanyi2026koorndijk,
+  abbr={LessWrong},
+  title={Replication of Koorndijk (2025): Differential Compliance May Reflect Prompt Sensitivity, Not Strategic Reasoning},
+  author={Ugwuanyi, Chijioke},
+  year={2026},
+  howpublished={LessWrong},
+  abstract={A replication of Koorndijk (2025) showing that the differential compliance observed in Llama 3 8B is better explained by lexical prompt sensitivity than by genuine strategic reasoning about training vs. deployment.},
+  html={https://www.lesswrong.com/posts/MRdPqbhpYfiMhbs77/replication-of-koorndijk-2025-differential-compliance-may}
 }
 
-@book{przibram1967letters,
-  bibtex_show={true},
-  title={Letters on wave mechanics},
-  author={Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year={1967},
-  publisher={Vision},
-  preview={wave-mechanics.gif},
-  abbr={Vision}
+@misc{ugwuanyi2026emergent,
+  abbr={Blog},
+  title={Replicating Emergent Misalignment: A Negative Result},
+  author={Ugwuanyi, Chijioke},
+  year={2026},
+  howpublished={Personal blog},
+  abstract={An attempted replication of Betley et al.'s emergent misalignment work that produced a negative result: 4-bit QLoRA fine-tuning induced code mode collapse rather than the reported persona shift.},
+  html={https://xplorer1.github.io/blog/2026/emergent-misalignment-replication/}
 }
