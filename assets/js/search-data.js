@@ -16,13 +16,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "nav-research-notes",
-          title: "research notes",
-          description: "Notes on research papers I am reading in AI safety. Written to think as I read.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/notes/";
-          },
         },{id: "nav-projects",
           title: "projects",
           description: "a selection of my projects",
@@ -39,7 +32,7 @@ ninja.data = [{
           },
         },{id: "nav-cv",
           title: "cv",
-          description: "Chijioke Ugwuanyi - Machine Learning Engineer &amp; Researcher at Carnegie Mellon University",
+          description: "Chijioke Ugwuanyi - AI Safety Researcher",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
@@ -230,7 +223,7 @@ ninja.data = [{
         title: 'email',
         section: 'Socials',
         handler: () => {
-          window.open("mailto:%63%75%67%77%75%61%6E%79@%61%6E%64%72%65%77.%63%6D%75.%65%64%75", "_blank");
+          window.open("mailto:%63%6A.%75%67%77%75%61%6E%79%69@%67%6D%61%69%6C.%63%6F%6D", "_blank");
         },
       },{
         id: 'social-github',
